@@ -1,0 +1,3406 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/chenglou/react-motion#readme"
+
+    >react-motion (v0.4.7)</a>
+</h1>
+<h4>A spring that solves your animation problems.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-motion">module react-motion</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">react-motion.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.Motion">
+            function <span class="apidocSignatureSpan">react-motion.</span>Motion
+            <span class="apidocSignatureSpan">(props, context, updater)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.StaggeredMotion">
+            function <span class="apidocSignatureSpan">react-motion.</span>StaggeredMotion
+            <span class="apidocSignatureSpan">(props, context, updater)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.TransitionMotion">
+            function <span class="apidocSignatureSpan">react-motion.</span>TransitionMotion
+            <span class="apidocSignatureSpan">(props, context, updater)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.reorderKeys">
+            function <span class="apidocSignatureSpan">react-motion.</span>reorderKeys
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.spring">
+            function <span class="apidocSignatureSpan">react-motion.</span>spring
+            <span class="apidocSignatureSpan">(val, config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.</span>Motion.propTypes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.</span>Motion.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.</span>Motion.prototype.__reactAutoBindPairs</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.</span>StaggeredMotion.propTypes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.</span>StaggeredMotion.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.</span>StaggeredMotion.prototype.__reactAutoBindPairs</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.</span>TransitionMotion.defaultProps</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.</span>TransitionMotion.propTypes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.</span>TransitionMotion.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.</span>TransitionMotion.prototype.__reactAutoBindPairs</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.</span>presets</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-motion.Motion">module react-motion.Motion</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.Motion.Motion">
+            function <span class="apidocSignatureSpan">react-motion.</span>Motion
+            <span class="apidocSignatureSpan">(props, context, updater)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.Motion.</span>propTypes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">react-motion.Motion.</span>displayName</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-motion.Motion.propTypes">module react-motion.Motion.propTypes</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.Motion.propTypes.children">
+            function <span class="apidocSignatureSpan">react-motion.Motion.propTypes.</span>children
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.Motion.propTypes.defaultStyle">
+            function <span class="apidocSignatureSpan">react-motion.Motion.propTypes.</span>defaultStyle
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.Motion.propTypes.onRest">
+            function <span class="apidocSignatureSpan">react-motion.Motion.propTypes.</span>onRest
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.Motion.propTypes.style">
+            function <span class="apidocSignatureSpan">react-motion.Motion.propTypes.</span>style
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-motion.Motion.prototype">module react-motion.Motion.prototype</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>wasAnimating</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.Motion.prototype.clearUnreadPropStyle">
+            function <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>clearUnreadPropStyle
+            <span class="apidocSignatureSpan">(destStyle)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.Motion.prototype.componentDidMount">
+            function <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>componentDidMount
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.Motion.prototype.componentWillReceiveProps">
+            function <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>componentWillReceiveProps
+            <span class="apidocSignatureSpan">(props)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.Motion.prototype.componentWillUnmount">
+            function <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>componentWillUnmount
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.Motion.prototype.constructor">
+            function <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>constructor
+            <span class="apidocSignatureSpan">(props, context, updater)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.Motion.prototype.getInitialState">
+            function <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>getInitialState
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.Motion.prototype.render">
+            function <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>render
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.Motion.prototype.startAnimationIfNecessary">
+            function <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>startAnimationIfNecessary
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>accumulatedTime</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>prevTime</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>__reactAutoBindPairs</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>animationID</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>childContextTypes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>componentDidUpdate</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>componentWillMount</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>componentWillUpdate</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>contextTypes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>getChildContext</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>getDefaultProps</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>mixins</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>propTypes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>shouldComponentUpdate</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>statics</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>unreadPropStyle</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>updateComponent</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-motion.Motion.prototype.__reactAutoBindPairs">module react-motion.Motion.prototype.__reactAutoBindPairs</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.Motion.prototype.__reactAutoBindPairs.1">
+            function <span class="apidocSignatureSpan">react-motion.Motion.prototype.__reactAutoBindPairs.</span>1
+            <span class="apidocSignatureSpan">(destStyle)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.Motion.prototype.__reactAutoBindPairs.3">
+            function <span class="apidocSignatureSpan">react-motion.Motion.prototype.__reactAutoBindPairs.</span>3
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">react-motion.Motion.prototype.__reactAutoBindPairs.</span>0</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">react-motion.Motion.prototype.__reactAutoBindPairs.</span>2</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-motion.StaggeredMotion">module react-motion.StaggeredMotion</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.StaggeredMotion.StaggeredMotion">
+            function <span class="apidocSignatureSpan">react-motion.</span>StaggeredMotion
+            <span class="apidocSignatureSpan">(props, context, updater)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.StaggeredMotion.</span>propTypes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">react-motion.StaggeredMotion.</span>displayName</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-motion.StaggeredMotion.propTypes">module react-motion.StaggeredMotion.propTypes</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.StaggeredMotion.propTypes.children">
+            function <span class="apidocSignatureSpan">react-motion.StaggeredMotion.propTypes.</span>children
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.StaggeredMotion.propTypes.defaultStyles">
+            function <span class="apidocSignatureSpan">react-motion.StaggeredMotion.propTypes.</span>defaultStyles
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.StaggeredMotion.propTypes.styles">
+            function <span class="apidocSignatureSpan">react-motion.StaggeredMotion.propTypes.</span>styles
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-motion.StaggeredMotion.prototype">module react-motion.StaggeredMotion.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.StaggeredMotion.prototype.clearUnreadPropStyle">
+            function <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>clearUnreadPropStyle
+            <span class="apidocSignatureSpan">(unreadPropStyles)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.StaggeredMotion.prototype.componentDidMount">
+            function <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>componentDidMount
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.StaggeredMotion.prototype.componentWillReceiveProps">
+            function <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>componentWillReceiveProps
+            <span class="apidocSignatureSpan">(props)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.StaggeredMotion.prototype.componentWillUnmount">
+            function <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>componentWillUnmount
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.StaggeredMotion.prototype.constructor">
+            function <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>constructor
+            <span class="apidocSignatureSpan">(props, context, updater)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.StaggeredMotion.prototype.getInitialState">
+            function <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>getInitialState
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.StaggeredMotion.prototype.render">
+            function <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>render
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.StaggeredMotion.prototype.startAnimationIfNecessary">
+            function <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>startAnimationIfNecessary
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>accumulatedTime</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>prevTime</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>__reactAutoBindPairs</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>animationID</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>childContextTypes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>componentDidUpdate</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>componentWillMount</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>componentWillUpdate</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>contextTypes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>getChildContext</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>getDefaultProps</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>mixins</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>propTypes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>shouldComponentUpdate</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>statics</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>unreadPropStyles</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>updateComponent</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-motion.StaggeredMotion.prototype.__reactAutoBindPairs">module react-motion.StaggeredMotion.prototype.__reactAutoBindPairs</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.StaggeredMotion.prototype.__reactAutoBindPairs.1">
+            function <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.__reactAutoBindPairs.</span>1
+            <span class="apidocSignatureSpan">(unreadPropStyles)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.StaggeredMotion.prototype.__reactAutoBindPairs.3">
+            function <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.__reactAutoBindPairs.</span>3
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.__reactAutoBindPairs.</span>0</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.__reactAutoBindPairs.</span>2</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-motion.TransitionMotion">module react-motion.TransitionMotion</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.TransitionMotion.TransitionMotion">
+            function <span class="apidocSignatureSpan">react-motion.</span>TransitionMotion
+            <span class="apidocSignatureSpan">(props, context, updater)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.TransitionMotion.getDefaultProps">
+            function <span class="apidocSignatureSpan">react-motion.TransitionMotion.</span>getDefaultProps
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.TransitionMotion.</span>defaultProps</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.TransitionMotion.</span>propTypes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">react-motion.TransitionMotion.</span>displayName</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-motion.TransitionMotion.defaultProps">module react-motion.TransitionMotion.defaultProps</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.TransitionMotion.defaultProps.didLeave">
+            function <span class="apidocSignatureSpan">react-motion.TransitionMotion.defaultProps.</span>didLeave
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.TransitionMotion.defaultProps.willEnter">
+            function <span class="apidocSignatureSpan">react-motion.TransitionMotion.defaultProps.</span>willEnter
+            <span class="apidocSignatureSpan">(styleThatEntered)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.TransitionMotion.defaultProps.willLeave">
+            function <span class="apidocSignatureSpan">react-motion.TransitionMotion.defaultProps.</span>willLeave
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-motion.TransitionMotion.propTypes">module react-motion.TransitionMotion.propTypes</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.TransitionMotion.propTypes.children">
+            function <span class="apidocSignatureSpan">react-motion.TransitionMotion.propTypes.</span>children
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.TransitionMotion.propTypes.defaultStyles">
+            function <span class="apidocSignatureSpan">react-motion.TransitionMotion.propTypes.</span>defaultStyles
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.TransitionMotion.propTypes.didLeave">
+            function <span class="apidocSignatureSpan">react-motion.TransitionMotion.propTypes.</span>didLeave
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.TransitionMotion.propTypes.styles">
+            function <span class="apidocSignatureSpan">react-motion.TransitionMotion.propTypes.</span>styles
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.TransitionMotion.propTypes.willEnter">
+            function <span class="apidocSignatureSpan">react-motion.TransitionMotion.propTypes.</span>willEnter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.TransitionMotion.propTypes.willLeave">
+            function <span class="apidocSignatureSpan">react-motion.TransitionMotion.propTypes.</span>willLeave
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-motion.TransitionMotion.prototype">module react-motion.TransitionMotion.prototype</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>unmounting</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.TransitionMotion.prototype.clearUnreadPropStyle">
+            function <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>clearUnreadPropStyle
+            <span class="apidocSignatureSpan">(unreadPropStyles)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.TransitionMotion.prototype.componentDidMount">
+            function <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>componentDidMount
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.TransitionMotion.prototype.componentWillReceiveProps">
+            function <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>componentWillReceiveProps
+            <span class="apidocSignatureSpan">(props)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.TransitionMotion.prototype.componentWillUnmount">
+            function <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>componentWillUnmount
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.TransitionMotion.prototype.constructor">
+            function <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>constructor
+            <span class="apidocSignatureSpan">(props, context, updater)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.TransitionMotion.prototype.getInitialState">
+            function <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>getInitialState
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.TransitionMotion.prototype.render">
+            function <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>render
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.TransitionMotion.prototype.startAnimationIfNecessary">
+            function <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>startAnimationIfNecessary
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>accumulatedTime</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>prevTime</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>__reactAutoBindPairs</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>animationID</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>childContextTypes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>componentDidUpdate</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>componentWillMount</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>componentWillUpdate</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>contextTypes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>getChildContext</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>getDefaultProps</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>mixins</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>propTypes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>shouldComponentUpdate</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>statics</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>unreadPropStyles</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>updateComponent</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-motion.TransitionMotion.prototype.__reactAutoBindPairs">module react-motion.TransitionMotion.prototype.__reactAutoBindPairs</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.TransitionMotion.prototype.__reactAutoBindPairs.1">
+            function <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.__reactAutoBindPairs.</span>1
+            <span class="apidocSignatureSpan">(unreadPropStyles)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-motion.TransitionMotion.prototype.__reactAutoBindPairs.3">
+            function <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.__reactAutoBindPairs.</span>3
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.__reactAutoBindPairs.</span>0</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.__reactAutoBindPairs.</span>2</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-motion" id="apidoc.module.react-motion">module react-motion</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.Motion" id="apidoc.element.react-motion.Motion">
+        function <span class="apidocSignatureSpan">react-motion.</span>Motion
+        <span class="apidocSignatureSpan">(props, context, updater)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Motion = function (props, context, updater) {
+  // This constructor gets overridden by mocks. The argument is used
+  // by mocks to assert on what gets mounted.
+
+  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
+    process.env.NODE_ENV !== &#x27;production&#x27; ? warning(this instanceof Constructor, &#x27;Something is calling a React component directly
+. Use a factory or &#x27; + &#x27;JSX instead. See: https://fb.me/react-legacyfactory&#x27;) : void 0;
+  }
+
+  // Wire up auto-binding
+  if (this.__reactAutoBindPairs.length) {
+    bindAutoBindMethods(this);
+  }
+
+  this.props = props;
+  this.context = context;
+  this.refs = emptyObject;
+  this.updater = updater || ReactNoopUpdateQueue;
+
+  this.state = null;
+
+  // ReactClasses doesn&#x27;t have constructors. Instead, they use the
+  // getInitialState and componentWillMount methods for initialization.
+
+  var initialState = this.getInitialState ? this.getInitialState() : null;
+  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
+    // We allow auto-mocks to proceed as if they&#x27;re returning null.
+    if (initialState === undefined &#x26;&#x26; this.getInitialState._isMockFunction) {
+      // This is probably bad practice. Consider warning here and
+      // deprecating this convenience.
+      initialState = null;
+    }
+  }
+  !(typeof initialState === &#x27;object&#x27; &#x26;&#x26; !Array.isArray(initialState)) ? process.env.NODE_ENV !== &#x27;production&#x27; ? invariant(false, &#x27;%
+s.getInitialState(): must return an object or null&#x27;, Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : _prodInvariant(&#x27;82&#x27;,
+Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
+
+  this.state = initialState;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.StaggeredMotion" id="apidoc.element.react-motion.StaggeredMotion">
+        function <span class="apidocSignatureSpan">react-motion.</span>StaggeredMotion
+        <span class="apidocSignatureSpan">(props, context, updater)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">StaggeredMotion = function (props, context, updater) {
+  // This constructor gets overridden by mocks. The argument is used
+  // by mocks to assert on what gets mounted.
+
+  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
+    process.env.NODE_ENV !== &#x27;production&#x27; ? warning(this instanceof Constructor, &#x27;Something is calling a React component directly
+. Use a factory or &#x27; + &#x27;JSX instead. See: https://fb.me/react-legacyfactory&#x27;) : void 0;
+  }
+
+  // Wire up auto-binding
+  if (this.__reactAutoBindPairs.length) {
+    bindAutoBindMethods(this);
+  }
+
+  this.props = props;
+  this.context = context;
+  this.refs = emptyObject;
+  this.updater = updater || ReactNoopUpdateQueue;
+
+  this.state = null;
+
+  // ReactClasses doesn&#x27;t have constructors. Instead, they use the
+  // getInitialState and componentWillMount methods for initialization.
+
+  var initialState = this.getInitialState ? this.getInitialState() : null;
+  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
+    // We allow auto-mocks to proceed as if they&#x27;re returning null.
+    if (initialState === undefined &#x26;&#x26; this.getInitialState._isMockFunction) {
+      // This is probably bad practice. Consider warning here and
+      // deprecating this convenience.
+      initialState = null;
+    }
+  }
+  !(typeof initialState === &#x27;object&#x27; &#x26;&#x26; !Array.isArray(initialState)) ? process.env.NODE_ENV !== &#x27;production&#x27; ? invariant(false, &#x27;%
+s.getInitialState(): must return an object or null&#x27;, Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : _prodInvariant(&#x27;82&#x27;,
+Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
+
+  this.state = initialState;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.TransitionMotion" id="apidoc.element.react-motion.TransitionMotion">
+        function <span class="apidocSignatureSpan">react-motion.</span>TransitionMotion
+        <span class="apidocSignatureSpan">(props, context, updater)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">TransitionMotion = function (props, context, updater) {
+  // This constructor gets overridden by mocks. The argument is used
+  // by mocks to assert on what gets mounted.
+
+  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
+    process.env.NODE_ENV !== &#x27;production&#x27; ? warning(this instanceof Constructor, &#x27;Something is calling a React component directly
+. Use a factory or &#x27; + &#x27;JSX instead. See: https://fb.me/react-legacyfactory&#x27;) : void 0;
+  }
+
+  // Wire up auto-binding
+  if (this.__reactAutoBindPairs.length) {
+    bindAutoBindMethods(this);
+  }
+
+  this.props = props;
+  this.context = context;
+  this.refs = emptyObject;
+  this.updater = updater || ReactNoopUpdateQueue;
+
+  this.state = null;
+
+  // ReactClasses doesn&#x27;t have constructors. Instead, they use the
+  // getInitialState and componentWillMount methods for initialization.
+
+  var initialState = this.getInitialState ? this.getInitialState() : null;
+  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
+    // We allow auto-mocks to proceed as if they&#x27;re returning null.
+    if (initialState === undefined &#x26;&#x26; this.getInitialState._isMockFunction) {
+      // This is probably bad practice. Consider warning here and
+      // deprecating this convenience.
+      initialState = null;
+    }
+  }
+  !(typeof initialState === &#x27;object&#x27; &#x26;&#x26; !Array.isArray(initialState)) ? process.env.NODE_ENV !== &#x27;production&#x27; ? invariant(false, &#x27;%
+s.getInitialState(): must return an object or null&#x27;, Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : _prodInvariant(&#x27;82&#x27;,
+Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
+
+  this.state = initialState;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.reorderKeys" id="apidoc.element.react-motion.reorderKeys">
+        function <span class="apidocSignatureSpan">react-motion.</span>reorderKeys
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reorderKeys() {
+  if (process.env.NODE_ENV === &#x27;development&#x27;) {
+    if (!hasWarned) {
+      hasWarned = true;
+      console.error(&#x27;`reorderKeys` has been removed, since it is no longer needed for TransitionMotion\&#x27;s new styles array API.&#x27;);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.spring" id="apidoc.element.react-motion.spring">
+        function <span class="apidocSignatureSpan">react-motion.</span>spring
+        <span class="apidocSignatureSpan">(val, config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function spring(val, config) {
+  return _extends({}, defaultConfig, config, { val: val });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-motion.Motion" id="apidoc.module.react-motion.Motion">module react-motion.Motion</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.Motion.Motion" id="apidoc.element.react-motion.Motion.Motion">
+        function <span class="apidocSignatureSpan">react-motion.</span>Motion
+        <span class="apidocSignatureSpan">(props, context, updater)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Motion = function (props, context, updater) {
+  // This constructor gets overridden by mocks. The argument is used
+  // by mocks to assert on what gets mounted.
+
+  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
+    process.env.NODE_ENV !== &#x27;production&#x27; ? warning(this instanceof Constructor, &#x27;Something is calling a React component directly
+. Use a factory or &#x27; + &#x27;JSX instead. See: https://fb.me/react-legacyfactory&#x27;) : void 0;
+  }
+
+  // Wire up auto-binding
+  if (this.__reactAutoBindPairs.length) {
+    bindAutoBindMethods(this);
+  }
+
+  this.props = props;
+  this.context = context;
+  this.refs = emptyObject;
+  this.updater = updater || ReactNoopUpdateQueue;
+
+  this.state = null;
+
+  // ReactClasses doesn&#x27;t have constructors. Instead, they use the
+  // getInitialState and componentWillMount methods for initialization.
+
+  var initialState = this.getInitialState ? this.getInitialState() : null;
+  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
+    // We allow auto-mocks to proceed as if they&#x27;re returning null.
+    if (initialState === undefined &#x26;&#x26; this.getInitialState._isMockFunction) {
+      // This is probably bad practice. Consider warning here and
+      // deprecating this convenience.
+      initialState = null;
+    }
+  }
+  !(typeof initialState === &#x27;object&#x27; &#x26;&#x26; !Array.isArray(initialState)) ? process.env.NODE_ENV !== &#x27;production&#x27; ? invariant(false, &#x27;%
+s.getInitialState(): must return an object or null&#x27;, Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : _prodInvariant(&#x27;82&#x27;,
+Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
+
+  this.state = initialState;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-motion.Motion.propTypes" id="apidoc.module.react-motion.Motion.propTypes">module react-motion.Motion.propTypes</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.Motion.propTypes.children" id="apidoc.element.react-motion.Motion.propTypes.children">
+        function <span class="apidocSignatureSpan">react-motion.Motion.propTypes.</span>children
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">children = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.Motion.propTypes.defaultStyle" id="apidoc.element.react-motion.Motion.propTypes.defaultStyle">
+        function <span class="apidocSignatureSpan">react-motion.Motion.propTypes.</span>defaultStyle
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">defaultStyle = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.Motion.propTypes.onRest" id="apidoc.element.react-motion.Motion.propTypes.onRest">
+        function <span class="apidocSignatureSpan">react-motion.Motion.propTypes.</span>onRest
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">onRest = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.Motion.propTypes.style" id="apidoc.element.react-motion.Motion.propTypes.style">
+        function <span class="apidocSignatureSpan">react-motion.Motion.propTypes.</span>style
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">style = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-motion.Motion.prototype" id="apidoc.module.react-motion.Motion.prototype">module react-motion.Motion.prototype</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.Motion.prototype.clearUnreadPropStyle" id="apidoc.element.react-motion.Motion.prototype.clearUnreadPropStyle">
+        function <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>clearUnreadPropStyle
+        <span class="apidocSignatureSpan">(destStyle)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function clearUnreadPropStyle(destStyle) {
+  var dirty = false;
+  var _state = this.state;
+  var currentStyle = _state.currentStyle;
+  var currentVelocity = _state.currentVelocity;
+  var lastIdealStyle = _state.lastIdealStyle;
+  var lastIdealVelocity = _state.lastIdealVelocity;
+
+  for (var key in destStyle) {
+    if (!Object.prototype.hasOwnProperty.call(destStyle, key)) {
+      continue;
+    }
+
+    var styleValue = destStyle[key];
+    if (typeof styleValue === &#x27;number&#x27;) {
+      if (!dirty) {
+        dirty = true;
+        currentStyle = _extends({}, currentStyle);
+        currentVelocity = _extends({}, currentVelocity);
+        lastIdealStyle = _extends({}, lastIdealStyle);
+        lastIdealVelocity = _extends({}, lastIdealVelocity);
+      }
+
+      currentStyle[key] = styleValue;
+      currentVelocity[key] = 0;
+      lastIdealStyle[key] = styleValue;
+      lastIdealVelocity[key] = 0;
+    }
+  }
+
+  if (dirty) {
+    this.setState({ currentStyle: currentStyle, currentVelocity: currentVelocity, lastIdealStyle: lastIdealStyle, lastIdealVelocity
+: lastIdealVelocity });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.Motion.prototype.componentDidMount" id="apidoc.element.react-motion.Motion.prototype.componentDidMount">
+        function <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>componentDidMount
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function componentDidMount() {
+  this.prevTime = _performanceNow2[&#x27;default&#x27;]();
+  this.startAnimationIfNecessary();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.Motion.prototype.componentWillReceiveProps" id="apidoc.element.react-motion.Motion.prototype.componentWillReceiveProps">
+        function <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>componentWillReceiveProps
+        <span class="apidocSignatureSpan">(props)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function componentWillReceiveProps(props) {
+  if (this.unreadPropStyle != null) {
+    // previous props haven&#x27;t had the chance to be set yet; set them here
+    this.clearUnreadPropStyle(this.unreadPropStyle);
+  }
+
+  this.unreadPropStyle = props.style;
+  if (this.animationID == null) {
+    this.prevTime = _performanceNow2[&#x27;default&#x27;]();
+    this.startAnimationIfNecessary();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.Motion.prototype.componentWillUnmount" id="apidoc.element.react-motion.Motion.prototype.componentWillUnmount">
+        function <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>componentWillUnmount
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function componentWillUnmount() {
+  if (this.animationID != null) {
+    _raf2[&#x27;default&#x27;].cancel(this.animationID);
+    this.animationID = null;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.Motion.prototype.constructor" id="apidoc.element.react-motion.Motion.prototype.constructor">
+        function <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>constructor
+        <span class="apidocSignatureSpan">(props, context, updater)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">constructor = function (props, context, updater) {
+  // This constructor gets overridden by mocks. The argument is used
+  // by mocks to assert on what gets mounted.
+
+  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
+    process.env.NODE_ENV !== &#x27;production&#x27; ? warning(this instanceof Constructor, &#x27;Something is calling a React component directly
+. Use a factory or &#x27; + &#x27;JSX instead. See: https://fb.me/react-legacyfactory&#x27;) : void 0;
+  }
+
+  // Wire up auto-binding
+  if (this.__reactAutoBindPairs.length) {
+    bindAutoBindMethods(this);
+  }
+
+  this.props = props;
+  this.context = context;
+  this.refs = emptyObject;
+  this.updater = updater || ReactNoopUpdateQueue;
+
+  this.state = null;
+
+  // ReactClasses doesn&#x27;t have constructors. Instead, they use the
+  // getInitialState and componentWillMount methods for initialization.
+
+  var initialState = this.getInitialState ? this.getInitialState() : null;
+  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
+    // We allow auto-mocks to proceed as if they&#x27;re returning null.
+    if (initialState === undefined &#x26;&#x26; this.getInitialState._isMockFunction) {
+      // This is probably bad practice. Consider warning here and
+      // deprecating this convenience.
+      initialState = null;
+    }
+  }
+  !(typeof initialState === &#x27;object&#x27; &#x26;&#x26; !Array.isArray(initialState)) ? process.env.NODE_ENV !== &#x27;production&#x27; ? invariant(false, &#x27;%
+s.getInitialState(): must return an object or null&#x27;, Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : _prodInvariant(&#x27;82&#x27;,
+Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
+
+  this.state = initialState;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.Motion.prototype.getInitialState" id="apidoc.element.react-motion.Motion.prototype.getInitialState">
+        function <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>getInitialState
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getInitialState() {
+  var _props = this.props;
+  var defaultStyle = _props.defaultStyle;
+  var style = _props.style;
+
+  var currentStyle = defaultStyle || _stripStyle2[&#x27;default&#x27;](style);
+  var currentVelocity = _mapToZero2[&#x27;default&#x27;](currentStyle);
+  return {
+    currentStyle: currentStyle,
+    currentVelocity: currentVelocity,
+    lastIdealStyle: currentStyle,
+    lastIdealVelocity: currentVelocity
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.Motion.prototype.render" id="apidoc.element.react-motion.Motion.prototype.render">
+        function <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>render
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function render() {
+  var renderedChildren = this.props.children(this.state.currentStyle);
+  return renderedChildren &#x26;&#x26; _react2[&#x27;default&#x27;].Children.only(renderedChildren);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.Motion.prototype.startAnimationIfNecessary" id="apidoc.element.react-motion.Motion.prototype.startAnimationIfNecessary">
+        function <span class="apidocSignatureSpan">react-motion.Motion.prototype.</span>startAnimationIfNecessary
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function startAnimationIfNecessary() {
+  var _this = this;
+
+  // TODO: when config is {a: 10} and dest is {a: 10} do we raf once and
+  // call cb? No, otherwise accidental parent rerender causes cb trigger
+  this.animationID = _raf2[&#x27;default&#x27;](function (timestamp) {
+    // check if we need to animate in the first place
+    var propsStyle = _this.props.style;
+    if (_shouldStopAnimation2[&#x27;default&#x27;](_this.state.currentStyle, propsStyle, _this.state.currentVelocity)) {
+      if (_this.wasAnimating &#x26;&#x26; _this.props.onRest) {
+        _this.props.onRest();
+      }
+
+      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      _this.animationID = null;
+      _this.wasAnimating = false;
+      _this.accumulatedTime = 0;
+      return;
+    }
+
+    _this.wasAnimating = true;
+
+    var currentTime = timestamp || _performanceNow2[&#x27;default&#x27;]();
+    var timeDelta = currentTime - _this.prevTime;
+    _this.prevTime = currentTime;
+    _this.accumulatedTime = _this.accumulatedTime + timeDelta;
+    // more than 10 frames? prolly switched browser tab. Restart
+    if (_this.accumulatedTime &#x3e; msPerFrame * 10) {
+      _this.accumulatedTime = 0;
+    }
+
+    if (_this.accumulatedTime === 0) {
+      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      _this.animationID = null;
+      _this.startAnimationIfNecessary();
+      return;
+    }
+
+    var currentFrameCompletion = (_this.accumulatedTime - Math.floor(_this.accumulatedTime / msPerFrame) * msPerFrame) / msPerFrame
+;
+    var framesToCatchUp = Math.floor(_this.accumulatedTime / msPerFrame);
+
+    var newLastIdealStyle = {};
+    var newLastIdealVelocity = {};
+    var newCurrentStyle = {};
+    var newCurrentVelocity = {};
+
+    for (var key in propsStyle) {
+      if (!Object.prototype.hasOwnProperty.call(propsStyle, key)) {
+        continue;
+      }
+
+      var styleValue = propsStyle[key];
+      if (typeof styleValue === &#x27;number&#x27;) {
+        newCurrentStyle[key] = styleValue;
+        newCurrentVelocity[key] = 0;
+        newLastIdealStyle[key] = styleValue;
+        newLastIdealVelocity[key] = 0;
+      } else {
+        var newLastIdealStyleValue = _this.state.lastIdealStyle[key];
+        var newLastIdealVelocityValue = _this.state.lastIdealVelocity[key];
+        for (var i = 0; i &#x3c; framesToCatchUp; i++) {
+          var _stepper = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.val
+, styleValue.stiffness, styleValue.damping, styleValue.precision);
+
+          newLastIdealStyleValue = _stepper[0];
+          newLastIdealVelocityValue = _stepper[1];
+        }
+
+        var _stepper2 = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.val
+, styleValue.stiffness, styleValue.damping, styleValue.precision);
+
+        var nextIdealX = _stepper2[0];
+        var nextIdealV = _stepper2[1];
+
+        newCurrentStyle[key] = newLastIdealStyleValue + (nextIdealX - newLastIdealStyleValue) * currentFrameCompletion;
+        newCurrentVelocity[key] = newLastIdealVelocityValue + (nextIdealV - newLastIdealVelocityValue) * currentFrameCompletion;
+        newLastIdealStyle[key] = newLastIdealStyleValue;
+        newLastIdealVelocity[key] = newLastIdealVelocityValue;
+      }
+    }
+
+    _this.animationID = null;
+    // the amount we&#x27;re looped over above
+    _this.accumulatedTime -= framesToCatchUp * msPerFrame;
+
+    _this.setState({
+      currentStyle: newCurrentStyle,
+      currentVelocity: newCurrentVelocity,
+      lastIdealStyle: newLastIdealStyle,
+      lastIdealVelocity: newLastIdealVelocity
+    });
+
+    _this.unreadPropStyle = null;
+
+    _this.startAnimationIfNecessary();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-motion.Motion.prototype.__reactAutoBindPairs" id="apidoc.module.react-motion.Motion.prototype.__reactAutoBindPairs">module react-motion.Motion.prototype.__reactAutoBindPairs</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.Motion.prototype.__reactAutoBindPairs.1" id="apidoc.element.react-motion.Motion.prototype.__reactAutoBindPairs.1">
+        function <span class="apidocSignatureSpan">react-motion.Motion.prototype.__reactAutoBindPairs.</span>1
+        <span class="apidocSignatureSpan">(destStyle)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function clearUnreadPropStyle(destStyle) {
+  var dirty = false;
+  var _state = this.state;
+  var currentStyle = _state.currentStyle;
+  var currentVelocity = _state.currentVelocity;
+  var lastIdealStyle = _state.lastIdealStyle;
+  var lastIdealVelocity = _state.lastIdealVelocity;
+
+  for (var key in destStyle) {
+    if (!Object.prototype.hasOwnProperty.call(destStyle, key)) {
+      continue;
+    }
+
+    var styleValue = destStyle[key];
+    if (typeof styleValue === &#x27;number&#x27;) {
+      if (!dirty) {
+        dirty = true;
+        currentStyle = _extends({}, currentStyle);
+        currentVelocity = _extends({}, currentVelocity);
+        lastIdealStyle = _extends({}, lastIdealStyle);
+        lastIdealVelocity = _extends({}, lastIdealVelocity);
+      }
+
+      currentStyle[key] = styleValue;
+      currentVelocity[key] = 0;
+      lastIdealStyle[key] = styleValue;
+      lastIdealVelocity[key] = 0;
+    }
+  }
+
+  if (dirty) {
+    this.setState({ currentStyle: currentStyle, currentVelocity: currentVelocity, lastIdealStyle: lastIdealStyle, lastIdealVelocity
+: lastIdealVelocity });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.Motion.prototype.__reactAutoBindPairs.3" id="apidoc.element.react-motion.Motion.prototype.__reactAutoBindPairs.3">
+        function <span class="apidocSignatureSpan">react-motion.Motion.prototype.__reactAutoBindPairs.</span>3
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function startAnimationIfNecessary() {
+  var _this = this;
+
+  // TODO: when config is {a: 10} and dest is {a: 10} do we raf once and
+  // call cb? No, otherwise accidental parent rerender causes cb trigger
+  this.animationID = _raf2[&#x27;default&#x27;](function (timestamp) {
+    // check if we need to animate in the first place
+    var propsStyle = _this.props.style;
+    if (_shouldStopAnimation2[&#x27;default&#x27;](_this.state.currentStyle, propsStyle, _this.state.currentVelocity)) {
+      if (_this.wasAnimating &#x26;&#x26; _this.props.onRest) {
+        _this.props.onRest();
+      }
+
+      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      _this.animationID = null;
+      _this.wasAnimating = false;
+      _this.accumulatedTime = 0;
+      return;
+    }
+
+    _this.wasAnimating = true;
+
+    var currentTime = timestamp || _performanceNow2[&#x27;default&#x27;]();
+    var timeDelta = currentTime - _this.prevTime;
+    _this.prevTime = currentTime;
+    _this.accumulatedTime = _this.accumulatedTime + timeDelta;
+    // more than 10 frames? prolly switched browser tab. Restart
+    if (_this.accumulatedTime &#x3e; msPerFrame * 10) {
+      _this.accumulatedTime = 0;
+    }
+
+    if (_this.accumulatedTime === 0) {
+      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      _this.animationID = null;
+      _this.startAnimationIfNecessary();
+      return;
+    }
+
+    var currentFrameCompletion = (_this.accumulatedTime - Math.floor(_this.accumulatedTime / msPerFrame) * msPerFrame) / msPerFrame
+;
+    var framesToCatchUp = Math.floor(_this.accumulatedTime / msPerFrame);
+
+    var newLastIdealStyle = {};
+    var newLastIdealVelocity = {};
+    var newCurrentStyle = {};
+    var newCurrentVelocity = {};
+
+    for (var key in propsStyle) {
+      if (!Object.prototype.hasOwnProperty.call(propsStyle, key)) {
+        continue;
+      }
+
+      var styleValue = propsStyle[key];
+      if (typeof styleValue === &#x27;number&#x27;) {
+        newCurrentStyle[key] = styleValue;
+        newCurrentVelocity[key] = 0;
+        newLastIdealStyle[key] = styleValue;
+        newLastIdealVelocity[key] = 0;
+      } else {
+        var newLastIdealStyleValue = _this.state.lastIdealStyle[key];
+        var newLastIdealVelocityValue = _this.state.lastIdealVelocity[key];
+        for (var i = 0; i &#x3c; framesToCatchUp; i++) {
+          var _stepper = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.val
+, styleValue.stiffness, styleValue.damping, styleValue.precision);
+
+          newLastIdealStyleValue = _stepper[0];
+          newLastIdealVelocityValue = _stepper[1];
+        }
+
+        var _stepper2 = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.val
+, styleValue.stiffness, styleValue.damping, styleValue.precision);
+
+        var nextIdealX = _stepper2[0];
+        var nextIdealV = _stepper2[1];
+
+        newCurrentStyle[key] = newLastIdealStyleValue + (nextIdealX - newLastIdealStyleValue) * currentFrameCompletion;
+        newCurrentVelocity[key] = newLastIdealVelocityValue + (nextIdealV - newLastIdealVelocityValue) * currentFrameCompletion;
+        newLastIdealStyle[key] = newLastIdealStyleValue;
+        newLastIdealVelocity[key] = newLastIdealVelocityValue;
+      }
+    }
+
+    _this.animationID = null;
+    // the amount we&#x27;re looped over above
+    _this.accumulatedTime -= framesToCatchUp * msPerFrame;
+
+    _this.setState({
+      currentStyle: newCurrentStyle,
+      currentVelocity: newCurrentVelocity,
+      lastIdealStyle: newLastIdealStyle,
+      lastIdealVelocity: newLastIdealVelocity
+    });
+
+    _this.unreadPropStyle = null;
+
+    _this.startAnimationIfNecessary();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-motion.StaggeredMotion" id="apidoc.module.react-motion.StaggeredMotion">module react-motion.StaggeredMotion</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.StaggeredMotion.StaggeredMotion" id="apidoc.element.react-motion.StaggeredMotion.StaggeredMotion">
+        function <span class="apidocSignatureSpan">react-motion.</span>StaggeredMotion
+        <span class="apidocSignatureSpan">(props, context, updater)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">StaggeredMotion = function (props, context, updater) {
+  // This constructor gets overridden by mocks. The argument is used
+  // by mocks to assert on what gets mounted.
+
+  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
+    process.env.NODE_ENV !== &#x27;production&#x27; ? warning(this instanceof Constructor, &#x27;Something is calling a React component directly
+. Use a factory or &#x27; + &#x27;JSX instead. See: https://fb.me/react-legacyfactory&#x27;) : void 0;
+  }
+
+  // Wire up auto-binding
+  if (this.__reactAutoBindPairs.length) {
+    bindAutoBindMethods(this);
+  }
+
+  this.props = props;
+  this.context = context;
+  this.refs = emptyObject;
+  this.updater = updater || ReactNoopUpdateQueue;
+
+  this.state = null;
+
+  // ReactClasses doesn&#x27;t have constructors. Instead, they use the
+  // getInitialState and componentWillMount methods for initialization.
+
+  var initialState = this.getInitialState ? this.getInitialState() : null;
+  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
+    // We allow auto-mocks to proceed as if they&#x27;re returning null.
+    if (initialState === undefined &#x26;&#x26; this.getInitialState._isMockFunction) {
+      // This is probably bad practice. Consider warning here and
+      // deprecating this convenience.
+      initialState = null;
+    }
+  }
+  !(typeof initialState === &#x27;object&#x27; &#x26;&#x26; !Array.isArray(initialState)) ? process.env.NODE_ENV !== &#x27;production&#x27; ? invariant(false, &#x27;%
+s.getInitialState(): must return an object or null&#x27;, Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : _prodInvariant(&#x27;82&#x27;,
+Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
+
+  this.state = initialState;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-motion.StaggeredMotion.propTypes" id="apidoc.module.react-motion.StaggeredMotion.propTypes">module react-motion.StaggeredMotion.propTypes</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.StaggeredMotion.propTypes.children" id="apidoc.element.react-motion.StaggeredMotion.propTypes.children">
+        function <span class="apidocSignatureSpan">react-motion.StaggeredMotion.propTypes.</span>children
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">children = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.StaggeredMotion.propTypes.defaultStyles" id="apidoc.element.react-motion.StaggeredMotion.propTypes.defaultStyles">
+        function <span class="apidocSignatureSpan">react-motion.StaggeredMotion.propTypes.</span>defaultStyles
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">defaultStyles = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.StaggeredMotion.propTypes.styles" id="apidoc.element.react-motion.StaggeredMotion.propTypes.styles">
+        function <span class="apidocSignatureSpan">react-motion.StaggeredMotion.propTypes.</span>styles
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">styles = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-motion.StaggeredMotion.prototype" id="apidoc.module.react-motion.StaggeredMotion.prototype">module react-motion.StaggeredMotion.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.StaggeredMotion.prototype.clearUnreadPropStyle" id="apidoc.element.react-motion.StaggeredMotion.prototype.clearUnreadPropStyle">
+        function <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>clearUnreadPropStyle
+        <span class="apidocSignatureSpan">(unreadPropStyles)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function clearUnreadPropStyle(unreadPropStyles) {
+  var _state = this.state;
+  var currentStyles = _state.currentStyles;
+  var currentVelocities = _state.currentVelocities;
+  var lastIdealStyles = _state.lastIdealStyles;
+  var lastIdealVelocities = _state.lastIdealVelocities;
+
+  var someDirty = false;
+  for (var i = 0; i &#x3c; unreadPropStyles.length; i++) {
+    var unreadPropStyle = unreadPropStyles[i];
+    var dirty = false;
+
+    for (var key in unreadPropStyle) {
+      if (!Object.prototype.hasOwnProperty.call(unreadPropStyle, key)) {
+        continue;
+      }
+
+      var styleValue = unreadPropStyle[key];
+      if (typeof styleValue === &#x27;number&#x27;) {
+        if (!dirty) {
+          dirty = true;
+          someDirty = true;
+          currentStyles[i] = _extends({}, currentStyles[i]);
+          currentVelocities[i] = _extends({}, currentVelocities[i]);
+          lastIdealStyles[i] = _extends({}, lastIdealStyles[i]);
+          lastIdealVelocities[i] = _extends({}, lastIdealVelocities[i]);
+        }
+        currentStyles[i][key] = styleValue;
+        currentVelocities[i][key] = 0;
+        lastIdealStyles[i][key] = styleValue;
+        lastIdealVelocities[i][key] = 0;
+      }
+    }
+  }
+
+  if (someDirty) {
+    this.setState({ currentStyles: currentStyles, currentVelocities: currentVelocities, lastIdealStyles: lastIdealStyles, lastIdealVelocities
+: lastIdealVelocities });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.StaggeredMotion.prototype.componentDidMount" id="apidoc.element.react-motion.StaggeredMotion.prototype.componentDidMount">
+        function <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>componentDidMount
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function componentDidMount() {
+  this.prevTime = _performanceNow2[&#x27;default&#x27;]();
+  this.startAnimationIfNecessary();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.StaggeredMotion.prototype.componentWillReceiveProps" id="apidoc.element.react-motion.StaggeredMotion.prototype.componentWillReceiveProps">
+        function <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>componentWillReceiveProps
+        <span class="apidocSignatureSpan">(props)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function componentWillReceiveProps(props) {
+  if (this.unreadPropStyles != null) {
+    // previous props haven&#x27;t had the chance to be set yet; set them here
+    this.clearUnreadPropStyle(this.unreadPropStyles);
+  }
+
+  this.unreadPropStyles = props.styles(this.state.lastIdealStyles);
+  if (this.animationID == null) {
+    this.prevTime = _performanceNow2[&#x27;default&#x27;]();
+    this.startAnimationIfNecessary();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.StaggeredMotion.prototype.componentWillUnmount" id="apidoc.element.react-motion.StaggeredMotion.prototype.componentWillUnmount">
+        function <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>componentWillUnmount
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function componentWillUnmount() {
+  if (this.animationID != null) {
+    _raf2[&#x27;default&#x27;].cancel(this.animationID);
+    this.animationID = null;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.StaggeredMotion.prototype.constructor" id="apidoc.element.react-motion.StaggeredMotion.prototype.constructor">
+        function <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>constructor
+        <span class="apidocSignatureSpan">(props, context, updater)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">constructor = function (props, context, updater) {
+  // This constructor gets overridden by mocks. The argument is used
+  // by mocks to assert on what gets mounted.
+
+  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
+    process.env.NODE_ENV !== &#x27;production&#x27; ? warning(this instanceof Constructor, &#x27;Something is calling a React component directly
+. Use a factory or &#x27; + &#x27;JSX instead. See: https://fb.me/react-legacyfactory&#x27;) : void 0;
+  }
+
+  // Wire up auto-binding
+  if (this.__reactAutoBindPairs.length) {
+    bindAutoBindMethods(this);
+  }
+
+  this.props = props;
+  this.context = context;
+  this.refs = emptyObject;
+  this.updater = updater || ReactNoopUpdateQueue;
+
+  this.state = null;
+
+  // ReactClasses doesn&#x27;t have constructors. Instead, they use the
+  // getInitialState and componentWillMount methods for initialization.
+
+  var initialState = this.getInitialState ? this.getInitialState() : null;
+  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
+    // We allow auto-mocks to proceed as if they&#x27;re returning null.
+    if (initialState === undefined &#x26;&#x26; this.getInitialState._isMockFunction) {
+      // This is probably bad practice. Consider warning here and
+      // deprecating this convenience.
+      initialState = null;
+    }
+  }
+  !(typeof initialState === &#x27;object&#x27; &#x26;&#x26; !Array.isArray(initialState)) ? process.env.NODE_ENV !== &#x27;production&#x27; ? invariant(false, &#x27;%
+s.getInitialState(): must return an object or null&#x27;, Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : _prodInvariant(&#x27;82&#x27;,
+Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
+
+  this.state = initialState;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.StaggeredMotion.prototype.getInitialState" id="apidoc.element.react-motion.StaggeredMotion.prototype.getInitialState">
+        function <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>getInitialState
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getInitialState() {
+  var _props = this.props;
+  var defaultStyles = _props.defaultStyles;
+  var styles = _props.styles;
+
+  var currentStyles = defaultStyles || styles().map(_stripStyle2[&#x27;default&#x27;]);
+  var currentVelocities = currentStyles.map(function (currentStyle) {
+    return _mapToZero2[&#x27;default&#x27;](currentStyle);
+  });
+  return {
+    currentStyles: currentStyles,
+    currentVelocities: currentVelocities,
+    lastIdealStyles: currentStyles,
+    lastIdealVelocities: currentVelocities
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.StaggeredMotion.prototype.render" id="apidoc.element.react-motion.StaggeredMotion.prototype.render">
+        function <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>render
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function render() {
+  var renderedChildren = this.props.children(this.state.currentStyles);
+  return renderedChildren &#x26;&#x26; _react2[&#x27;default&#x27;].Children.only(renderedChildren);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.StaggeredMotion.prototype.startAnimationIfNecessary" id="apidoc.element.react-motion.StaggeredMotion.prototype.startAnimationIfNecessary">
+        function <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.</span>startAnimationIfNecessary
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function startAnimationIfNecessary() {
+  var _this = this;
+
+  // TODO: when config is {a: 10} and dest is {a: 10} do we raf once and
+  // call cb? No, otherwise accidental parent rerender causes cb trigger
+  this.animationID = _raf2[&#x27;default&#x27;](function (timestamp) {
+    var destStyles = _this.props.styles(_this.state.lastIdealStyles);
+
+    // check if we need to animate in the first place
+    if (shouldStopAnimationAll(_this.state.currentStyles, destStyles, _this.state.currentVelocities)) {
+      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      _this.animationID = null;
+      _this.accumulatedTime = 0;
+      return;
+    }
+
+    var currentTime = timestamp || _performanceNow2[&#x27;default&#x27;]();
+    var timeDelta = currentTime - _this.prevTime;
+    _this.prevTime = currentTime;
+    _this.accumulatedTime = _this.accumulatedTime + timeDelta;
+    // more than 10 frames? prolly switched browser tab. Restart
+    if (_this.accumulatedTime &#x3e; msPerFrame * 10) {
+      _this.accumulatedTime = 0;
+    }
+
+    if (_this.accumulatedTime === 0) {
+      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      _this.animationID = null;
+      _this.startAnimationIfNecessary();
+      return;
+    }
+
+    var currentFrameCompletion = (_this.accumulatedTime - Math.floor(_this.accumulatedTime / msPerFrame) * msPerFrame) / msPerFrame
+;
+    var framesToCatchUp = Math.floor(_this.accumulatedTime / msPerFrame);
+
+    var newLastIdealStyles = [];
+    var newLastIdealVelocities = [];
+    var newCurrentStyles = [];
+    var newCurrentVelocities = [];
+
+    for (var i = 0; i &#x3c; destStyles.length; i++) {
+      var destStyle = destStyles[i];
+      var newCurrentStyle = {};
+      var newCurrentVelocity = {};
+      var newLastIdealStyle = {};
+      var newLastIdealVelocity = {};
+
+      for (var key in destStyle) {
+        if (!Object.prototype.hasOwnProperty.call(destStyle, key)) {
+          continue;
+        }
+
+        var styleValue = destStyle[key];
+        if (typeof styleValue === &#x27;number&#x27;) {
+          newCurrentStyle[key] = styleValue;
+          newCurrentVelocity[key] = 0;
+          newLastIdealStyle[key] = styleValue;
+          newLastIdealVelocity[key] = 0;
+        } else {
+          var newLastIdealStyleValue = _this.state.lastIdealStyles[i][key];
+          var newLastIdealVelocityValue = _this.state.lastIdealVelocities[i][key];
+          for (var j = 0; j &#x3c; framesToCatchUp; j++) {
+            var _stepper = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue
+.val, styleValue.stiffness, styleValue.damping, styleValue.precision);
+
+            newLastIdealStyleValue = _stepper[0];
+            newLastIdealVelocityValue = _stepper[1];
+          }
+
+          var _stepper2 = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.
+val, styleValue.stiffness, styleValue.damping, styleValue.precision);
+
+          var nextIdealX = _stepper2[0];
+          var nextIdealV = _stepper2[1];
+
+          newCurrentStyle[key] = newLastIdealStyleValue + (nextIdealX - newLastIdealStyleValue) * currentFrameCompletion;
+          newCurrentVelocity[key] = newLastIdealVelocityValue + (nextIdealV - newLastIdealVelocityValue) * currentFrameCompletion
+;
+          newLastIdealStyle[key] = newLastIdealStyleValue;
+          newLastIdealVelocity[key] = newLastIdealVelocityValue;
+        }
+      }
+
+      newCurrentStyles[i] = newCurrentStyle;
+      newCurrentVelocities[i] = newCurrentVelocity;
+      newLastIdealStyles[i] = newLastIdealStyle;
+      newLastIdealVelocities[i] = newLastIdealVelocity;
+    }
+
+    _this.animationID = null;
+    // the amount we&#x27;re looped over above
+    _this.accumulatedTime -= framesToCatchUp * msPerFrame;
+
+    _this.setState({
+      currentStyles: newCurrentStyles,
+      currentVelocities: newCurrentVelocities,
+      lastIdealStyles: newLastIdealStyles,
+      lastIdealVelocities: newLastIdealVelocities
+    });
+
+    _this.unreadPropStyles = null;
+
+    _this.startAnimationIfNecessary();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-motion.StaggeredMotion.prototype.__reactAutoBindPairs" id="apidoc.module.react-motion.StaggeredMotion.prototype.__reactAutoBindPairs">module react-motion.StaggeredMotion.prototype.__reactAutoBindPairs</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.StaggeredMotion.prototype.__reactAutoBindPairs.1" id="apidoc.element.react-motion.StaggeredMotion.prototype.__reactAutoBindPairs.1">
+        function <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.__reactAutoBindPairs.</span>1
+        <span class="apidocSignatureSpan">(unreadPropStyles)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function clearUnreadPropStyle(unreadPropStyles) {
+  var _state = this.state;
+  var currentStyles = _state.currentStyles;
+  var currentVelocities = _state.currentVelocities;
+  var lastIdealStyles = _state.lastIdealStyles;
+  var lastIdealVelocities = _state.lastIdealVelocities;
+
+  var someDirty = false;
+  for (var i = 0; i &#x3c; unreadPropStyles.length; i++) {
+    var unreadPropStyle = unreadPropStyles[i];
+    var dirty = false;
+
+    for (var key in unreadPropStyle) {
+      if (!Object.prototype.hasOwnProperty.call(unreadPropStyle, key)) {
+        continue;
+      }
+
+      var styleValue = unreadPropStyle[key];
+      if (typeof styleValue === &#x27;number&#x27;) {
+        if (!dirty) {
+          dirty = true;
+          someDirty = true;
+          currentStyles[i] = _extends({}, currentStyles[i]);
+          currentVelocities[i] = _extends({}, currentVelocities[i]);
+          lastIdealStyles[i] = _extends({}, lastIdealStyles[i]);
+          lastIdealVelocities[i] = _extends({}, lastIdealVelocities[i]);
+        }
+        currentStyles[i][key] = styleValue;
+        currentVelocities[i][key] = 0;
+        lastIdealStyles[i][key] = styleValue;
+        lastIdealVelocities[i][key] = 0;
+      }
+    }
+  }
+
+  if (someDirty) {
+    this.setState({ currentStyles: currentStyles, currentVelocities: currentVelocities, lastIdealStyles: lastIdealStyles, lastIdealVelocities
+: lastIdealVelocities });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.StaggeredMotion.prototype.__reactAutoBindPairs.3" id="apidoc.element.react-motion.StaggeredMotion.prototype.__reactAutoBindPairs.3">
+        function <span class="apidocSignatureSpan">react-motion.StaggeredMotion.prototype.__reactAutoBindPairs.</span>3
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function startAnimationIfNecessary() {
+  var _this = this;
+
+  // TODO: when config is {a: 10} and dest is {a: 10} do we raf once and
+  // call cb? No, otherwise accidental parent rerender causes cb trigger
+  this.animationID = _raf2[&#x27;default&#x27;](function (timestamp) {
+    var destStyles = _this.props.styles(_this.state.lastIdealStyles);
+
+    // check if we need to animate in the first place
+    if (shouldStopAnimationAll(_this.state.currentStyles, destStyles, _this.state.currentVelocities)) {
+      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      _this.animationID = null;
+      _this.accumulatedTime = 0;
+      return;
+    }
+
+    var currentTime = timestamp || _performanceNow2[&#x27;default&#x27;]();
+    var timeDelta = currentTime - _this.prevTime;
+    _this.prevTime = currentTime;
+    _this.accumulatedTime = _this.accumulatedTime + timeDelta;
+    // more than 10 frames? prolly switched browser tab. Restart
+    if (_this.accumulatedTime &#x3e; msPerFrame * 10) {
+      _this.accumulatedTime = 0;
+    }
+
+    if (_this.accumulatedTime === 0) {
+      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      _this.animationID = null;
+      _this.startAnimationIfNecessary();
+      return;
+    }
+
+    var currentFrameCompletion = (_this.accumulatedTime - Math.floor(_this.accumulatedTime / msPerFrame) * msPerFrame) / msPerFrame
+;
+    var framesToCatchUp = Math.floor(_this.accumulatedTime / msPerFrame);
+
+    var newLastIdealStyles = [];
+    var newLastIdealVelocities = [];
+    var newCurrentStyles = [];
+    var newCurrentVelocities = [];
+
+    for (var i = 0; i &#x3c; destStyles.length; i++) {
+      var destStyle = destStyles[i];
+      var newCurrentStyle = {};
+      var newCurrentVelocity = {};
+      var newLastIdealStyle = {};
+      var newLastIdealVelocity = {};
+
+      for (var key in destStyle) {
+        if (!Object.prototype.hasOwnProperty.call(destStyle, key)) {
+          continue;
+        }
+
+        var styleValue = destStyle[key];
+        if (typeof styleValue === &#x27;number&#x27;) {
+          newCurrentStyle[key] = styleValue;
+          newCurrentVelocity[key] = 0;
+          newLastIdealStyle[key] = styleValue;
+          newLastIdealVelocity[key] = 0;
+        } else {
+          var newLastIdealStyleValue = _this.state.lastIdealStyles[i][key];
+          var newLastIdealVelocityValue = _this.state.lastIdealVelocities[i][key];
+          for (var j = 0; j &#x3c; framesToCatchUp; j++) {
+            var _stepper = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue
+.val, styleValue.stiffness, styleValue.damping, styleValue.precision);
+
+            newLastIdealStyleValue = _stepper[0];
+            newLastIdealVelocityValue = _stepper[1];
+          }
+
+          var _stepper2 = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.
+val, styleValue.stiffness, styleValue.damping, styleValue.precision);
+
+          var nextIdealX = _stepper2[0];
+          var nextIdealV = _stepper2[1];
+
+          newCurrentStyle[key] = newLastIdealStyleValue + (nextIdealX - newLastIdealStyleValue) * currentFrameCompletion;
+          newCurrentVelocity[key] = newLastIdealVelocityValue + (nextIdealV - newLastIdealVelocityValue) * currentFrameCompletion
+;
+          newLastIdealStyle[key] = newLastIdealStyleValue;
+          newLastIdealVelocity[key] = newLastIdealVelocityValue;
+        }
+      }
+
+      newCurrentStyles[i] = newCurrentStyle;
+      newCurrentVelocities[i] = newCurrentVelocity;
+      newLastIdealStyles[i] = newLastIdealStyle;
+      newLastIdealVelocities[i] = newLastIdealVelocity;
+    }
+
+    _this.animationID = null;
+    // the amount we&#x27;re looped over above
+    _this.accumulatedTime -= framesToCatchUp * msPerFrame;
+
+    _this.setState({
+      currentStyles: newCurrentStyles,
+      currentVelocities: newCurrentVelocities,
+      lastIdealStyles: newLastIdealStyles,
+      lastIdealVelocities: newLastIdealVelocities
+    });
+
+    _this.unreadPropStyles = null;
+
+    _this.startAnimationIfNecessary();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-motion.TransitionMotion" id="apidoc.module.react-motion.TransitionMotion">module react-motion.TransitionMotion</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.TransitionMotion.TransitionMotion" id="apidoc.element.react-motion.TransitionMotion.TransitionMotion">
+        function <span class="apidocSignatureSpan">react-motion.</span>TransitionMotion
+        <span class="apidocSignatureSpan">(props, context, updater)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">TransitionMotion = function (props, context, updater) {
+  // This constructor gets overridden by mocks. The argument is used
+  // by mocks to assert on what gets mounted.
+
+  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
+    process.env.NODE_ENV !== &#x27;production&#x27; ? warning(this instanceof Constructor, &#x27;Something is calling a React component directly
+. Use a factory or &#x27; + &#x27;JSX instead. See: https://fb.me/react-legacyfactory&#x27;) : void 0;
+  }
+
+  // Wire up auto-binding
+  if (this.__reactAutoBindPairs.length) {
+    bindAutoBindMethods(this);
+  }
+
+  this.props = props;
+  this.context = context;
+  this.refs = emptyObject;
+  this.updater = updater || ReactNoopUpdateQueue;
+
+  this.state = null;
+
+  // ReactClasses doesn&#x27;t have constructors. Instead, they use the
+  // getInitialState and componentWillMount methods for initialization.
+
+  var initialState = this.getInitialState ? this.getInitialState() : null;
+  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
+    // We allow auto-mocks to proceed as if they&#x27;re returning null.
+    if (initialState === undefined &#x26;&#x26; this.getInitialState._isMockFunction) {
+      // This is probably bad practice. Consider warning here and
+      // deprecating this convenience.
+      initialState = null;
+    }
+  }
+  !(typeof initialState === &#x27;object&#x27; &#x26;&#x26; !Array.isArray(initialState)) ? process.env.NODE_ENV !== &#x27;production&#x27; ? invariant(false, &#x27;%
+s.getInitialState(): must return an object or null&#x27;, Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : _prodInvariant(&#x27;82&#x27;,
+Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
+
+  this.state = initialState;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.TransitionMotion.getDefaultProps" id="apidoc.element.react-motion.TransitionMotion.getDefaultProps">
+        function <span class="apidocSignatureSpan">react-motion.TransitionMotion.</span>getDefaultProps
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getDefaultProps() {
+  return {
+    willEnter: function willEnter(styleThatEntered) {
+      return _stripStyle2[&#x27;default&#x27;](styleThatEntered.style);
+    },
+    // recall: returning null makes the current unmounting TransitionStyle
+    // disappear immediately
+    willLeave: function willLeave() {
+      return null;
+    },
+    didLeave: function didLeave() {}
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-motion.TransitionMotion.defaultProps" id="apidoc.module.react-motion.TransitionMotion.defaultProps">module react-motion.TransitionMotion.defaultProps</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.TransitionMotion.defaultProps.didLeave" id="apidoc.element.react-motion.TransitionMotion.defaultProps.didLeave">
+        function <span class="apidocSignatureSpan">react-motion.TransitionMotion.defaultProps.</span>didLeave
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function didLeave() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.TransitionMotion.defaultProps.willEnter" id="apidoc.element.react-motion.TransitionMotion.defaultProps.willEnter">
+        function <span class="apidocSignatureSpan">react-motion.TransitionMotion.defaultProps.</span>willEnter
+        <span class="apidocSignatureSpan">(styleThatEntered)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function willEnter(styleThatEntered) {
+  return _stripStyle2[&#x27;default&#x27;](styleThatEntered.style);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.TransitionMotion.defaultProps.willLeave" id="apidoc.element.react-motion.TransitionMotion.defaultProps.willLeave">
+        function <span class="apidocSignatureSpan">react-motion.TransitionMotion.defaultProps.</span>willLeave
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function willLeave() {
+  return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-motion.TransitionMotion.propTypes" id="apidoc.module.react-motion.TransitionMotion.propTypes">module react-motion.TransitionMotion.propTypes</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.TransitionMotion.propTypes.children" id="apidoc.element.react-motion.TransitionMotion.propTypes.children">
+        function <span class="apidocSignatureSpan">react-motion.TransitionMotion.propTypes.</span>children
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">children = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.TransitionMotion.propTypes.defaultStyles" id="apidoc.element.react-motion.TransitionMotion.propTypes.defaultStyles">
+        function <span class="apidocSignatureSpan">react-motion.TransitionMotion.propTypes.</span>defaultStyles
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">defaultStyles = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.TransitionMotion.propTypes.didLeave" id="apidoc.element.react-motion.TransitionMotion.propTypes.didLeave">
+        function <span class="apidocSignatureSpan">react-motion.TransitionMotion.propTypes.</span>didLeave
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">didLeave = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.TransitionMotion.propTypes.styles" id="apidoc.element.react-motion.TransitionMotion.propTypes.styles">
+        function <span class="apidocSignatureSpan">react-motion.TransitionMotion.propTypes.</span>styles
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">styles = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.TransitionMotion.propTypes.willEnter" id="apidoc.element.react-motion.TransitionMotion.propTypes.willEnter">
+        function <span class="apidocSignatureSpan">react-motion.TransitionMotion.propTypes.</span>willEnter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">willEnter = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.TransitionMotion.propTypes.willLeave" id="apidoc.element.react-motion.TransitionMotion.propTypes.willLeave">
+        function <span class="apidocSignatureSpan">react-motion.TransitionMotion.propTypes.</span>willLeave
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">willLeave = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-motion.TransitionMotion.prototype" id="apidoc.module.react-motion.TransitionMotion.prototype">module react-motion.TransitionMotion.prototype</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.TransitionMotion.prototype.clearUnreadPropStyle" id="apidoc.element.react-motion.TransitionMotion.prototype.clearUnreadPropStyle">
+        function <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>clearUnreadPropStyle
+        <span class="apidocSignatureSpan">(unreadPropStyles)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function clearUnreadPropStyle(unreadPropStyles) {
+  var _mergeAndSync2 = mergeAndSync(this.props.willEnter, this.props.willLeave, this.props.didLeave, this.state.mergedPropsStyles
+, unreadPropStyles, this.state.currentStyles, this.state.currentVelocities, this.state.lastIdealStyles, this.state.lastIdealVelocities
+);
+
+  var mergedPropsStyles = _mergeAndSync2[0];
+  var currentStyles = _mergeAndSync2[1];
+  var currentVelocities = _mergeAndSync2[2];
+  var lastIdealStyles = _mergeAndSync2[3];
+  var lastIdealVelocities = _mergeAndSync2[4];
+
+  for (var i = 0; i &#x3c; unreadPropStyles.length; i++) {
+    var unreadPropStyle = unreadPropStyles[i].style;
+    var dirty = false;
+
+    for (var key in unreadPropStyle) {
+      if (!Object.prototype.hasOwnProperty.call(unreadPropStyle, key)) {
+        continue;
+      }
+
+      var styleValue = unreadPropStyle[key];
+      if (typeof styleValue === &#x27;number&#x27;) {
+        if (!dirty) {
+          dirty = true;
+          currentStyles[i] = _extends({}, currentStyles[i]);
+          currentVelocities[i] = _extends({}, currentVelocities[i]);
+          lastIdealStyles[i] = _extends({}, lastIdealStyles[i]);
+          lastIdealVelocities[i] = _extends({}, lastIdealVelocities[i]);
+          mergedPropsStyles[i] = {
+            key: mergedPropsStyles[i].key,
+            data: mergedPropsStyles[i].data,
+            style: _extends({}, mergedPropsStyles[i].style)
+          };
+        }
+        currentStyles[i][key] = styleValue;
+        currentVelocities[i][key] = 0;
+        lastIdealStyles[i][key] = styleValue;
+        lastIdealVelocities[i][key] = 0;
+        mergedPropsStyles[i].style[key] = styleValue;
+      }
+    }
+  }
+
+  // unlike the other 2 components, we can&#x27;t detect staleness and optionally
+  // opt out of setState here. each style object&#x27;s data might contain new
+  // stuff we&#x27;re not/cannot compare
+  this.setState({
+    currentStyles: currentStyles,
+    currentVelocities: currentVelocities,
+    mergedPropsStyles: mergedPropsStyles,
+    lastIdealStyles: lastIdealStyles,
+    lastIdealVelocities: lastIdealVelocities
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.TransitionMotion.prototype.componentDidMount" id="apidoc.element.react-motion.TransitionMotion.prototype.componentDidMount">
+        function <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>componentDidMount
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function componentDidMount() {
+  this.prevTime = _performanceNow2[&#x27;default&#x27;]();
+  this.startAnimationIfNecessary();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.TransitionMotion.prototype.componentWillReceiveProps" id="apidoc.element.react-motion.TransitionMotion.prototype.componentWillReceiveProps">
+        function <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>componentWillReceiveProps
+        <span class="apidocSignatureSpan">(props)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function componentWillReceiveProps(props) {
+  if (this.unreadPropStyles) {
+    // previous props haven&#x27;t had the chance to be set yet; set them here
+    this.clearUnreadPropStyle(this.unreadPropStyles);
+  }
+
+  var styles = props.styles;
+  if (typeof styles === &#x27;function&#x27;) {
+    this.unreadPropStyles = styles(rehydrateStyles(this.state.mergedPropsStyles, this.unreadPropStyles, this.state.lastIdealStyles
+));
+  } else {
+    this.unreadPropStyles = styles;
+  }
+
+  if (this.animationID == null) {
+    this.prevTime = _performanceNow2[&#x27;default&#x27;]();
+    this.startAnimationIfNecessary();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.TransitionMotion.prototype.componentWillUnmount" id="apidoc.element.react-motion.TransitionMotion.prototype.componentWillUnmount">
+        function <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>componentWillUnmount
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function componentWillUnmount() {
+  this.unmounting = true;
+  if (this.animationID != null) {
+    _raf2[&#x27;default&#x27;].cancel(this.animationID);
+    this.animationID = null;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.TransitionMotion.prototype.constructor" id="apidoc.element.react-motion.TransitionMotion.prototype.constructor">
+        function <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>constructor
+        <span class="apidocSignatureSpan">(props, context, updater)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">constructor = function (props, context, updater) {
+  // This constructor gets overridden by mocks. The argument is used
+  // by mocks to assert on what gets mounted.
+
+  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
+    process.env.NODE_ENV !== &#x27;production&#x27; ? warning(this instanceof Constructor, &#x27;Something is calling a React component directly
+. Use a factory or &#x27; + &#x27;JSX instead. See: https://fb.me/react-legacyfactory&#x27;) : void 0;
+  }
+
+  // Wire up auto-binding
+  if (this.__reactAutoBindPairs.length) {
+    bindAutoBindMethods(this);
+  }
+
+  this.props = props;
+  this.context = context;
+  this.refs = emptyObject;
+  this.updater = updater || ReactNoopUpdateQueue;
+
+  this.state = null;
+
+  // ReactClasses doesn&#x27;t have constructors. Instead, they use the
+  // getInitialState and componentWillMount methods for initialization.
+
+  var initialState = this.getInitialState ? this.getInitialState() : null;
+  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
+    // We allow auto-mocks to proceed as if they&#x27;re returning null.
+    if (initialState === undefined &#x26;&#x26; this.getInitialState._isMockFunction) {
+      // This is probably bad practice. Consider warning here and
+      // deprecating this convenience.
+      initialState = null;
+    }
+  }
+  !(typeof initialState === &#x27;object&#x27; &#x26;&#x26; !Array.isArray(initialState)) ? process.env.NODE_ENV !== &#x27;production&#x27; ? invariant(false, &#x27;%
+s.getInitialState(): must return an object or null&#x27;, Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : _prodInvariant(&#x27;82&#x27;,
+Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
+
+  this.state = initialState;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.TransitionMotion.prototype.getInitialState" id="apidoc.element.react-motion.TransitionMotion.prototype.getInitialState">
+        function <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>getInitialState
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getInitialState() {
+  var _props = this.props;
+  var defaultStyles = _props.defaultStyles;
+  var styles = _props.styles;
+  var willEnter = _props.willEnter;
+  var willLeave = _props.willLeave;
+  var didLeave = _props.didLeave;
+
+  var destStyles = typeof styles === &#x27;function&#x27; ? styles(defaultStyles) : styles;
+
+  // this is special. for the first time around, we don&#x27;t have a comparison
+  // between last (no last) and current merged props. we&#x27;ll compute last so:
+  // say default is {a, b} and styles (dest style) is {b, c}, we&#x27;ll
+  // fabricate last as {a, b}
+  var oldMergedPropsStyles = undefined;
+  if (defaultStyles == null) {
+    oldMergedPropsStyles = destStyles;
+  } else {
+    oldMergedPropsStyles = defaultStyles.map(function (defaultStyleCell) {
+      // TODO: key search code
+      for (var i = 0; i &#x3c; destStyles.length; i++) {
+        if (destStyles[i].key === defaultStyleCell.key) {
+          return destStyles[i];
+        }
+      }
+      return defaultStyleCell;
+    });
+  }
+  var oldCurrentStyles = defaultStyles == null ? destStyles.map(function (s) {
+    return _stripStyle2[&#x27;default&#x27;](s.style);
+  }) : defaultStyles.map(function (s) {
+    return _stripStyle2[&#x27;default&#x27;](s.style);
+  });
+  var oldCurrentVelocities = defaultStyles == null ? destStyles.map(function (s) {
+    return _mapToZero2[&#x27;default&#x27;](s.style);
+  }) : defaultStyles.map(function (s) {
+    return _mapToZero2[&#x27;default&#x27;](s.style);
+  });
+
+  var _mergeAndSync = mergeAndSync(
+  // Because this is an old-style React.createClass component, Flow doesn&#x27;t
+  // understand that the willEnter and willLeave props have default values
+  // and will always be present.
+  willEnter, willLeave, didLeave, oldMergedPropsStyles, destStyles, oldCurrentStyles, oldCurrentVelocities, oldCurrentStyles, //
+oldLastIdealStyles really
+  oldCurrentVelocities);
+
+  var mergedPropsStyles = _mergeAndSync[0];
+  var currentStyles = _mergeAndSync[1];
+  var currentVelocities = _mergeAndSync[2];
+  var lastIdealStyles = _mergeAndSync[3];
+  var lastIdealVelocities = _mergeAndSync[4];
+  // oldLastIdealVelocities really
+
+  return {
+    currentStyles: currentStyles,
+    currentVelocities: currentVelocities,
+    lastIdealStyles: lastIdealStyles,
+    lastIdealVelocities: lastIdealVelocities,
+    mergedPropsStyles: mergedPropsStyles
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.TransitionMotion.prototype.render" id="apidoc.element.react-motion.TransitionMotion.prototype.render">
+        function <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>render
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function render() {
+  var hydratedStyles = rehydrateStyles(this.state.mergedPropsStyles, this.unreadPropStyles, this.state.currentStyles);
+  var renderedChildren = this.props.children(hydratedStyles);
+  return renderedChildren &#x26;&#x26; _react2[&#x27;default&#x27;].Children.only(renderedChildren);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.TransitionMotion.prototype.startAnimationIfNecessary" id="apidoc.element.react-motion.TransitionMotion.prototype.startAnimationIfNecessary">
+        function <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.</span>startAnimationIfNecessary
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function startAnimationIfNecessary() {
+  var _this = this;
+
+  if (this.unmounting) {
+    return;
+  }
+  // TODO: when config is {a: 10} and dest is {a: 10} do we raf once and
+  // call cb? No, otherwise accidental parent rerender causes cb trigger
+  this.animationID = _raf2[&#x27;default&#x27;](function (timestamp) {
+    var propStyles = _this.props.styles;
+    var destStyles = typeof propStyles === &#x27;function&#x27; ? propStyles(rehydrateStyles(_this.state.mergedPropsStyles, _this.unreadPropStyles
+, _this.state.lastIdealStyles)) : propStyles;
+
+    // check if we need to animate in the first place
+    if (shouldStopAnimationAll(_this.state.currentStyles, destStyles, _this.state.currentVelocities, _this.state.mergedPropsStyles
+)) {
+      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      _this.animationID = null;
+      _this.accumulatedTime = 0;
+      return;
+    }
+
+    var currentTime = timestamp || _performanceNow2[&#x27;default&#x27;]();
+    var timeDelta = currentTime - _this.prevTime;
+    _this.prevTime = currentTime;
+    _this.accumulatedTime = _this.accumulatedTime + timeDelta;
+    // more than 10 frames? prolly switched browser tab. Restart
+    if (_this.accumulatedTime &#x3e; msPerFrame * 10) {
+      _this.accumulatedTime = 0;
+    }
+
+    if (_this.accumulatedTime === 0) {
+      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      _this.animationID = null;
+      _this.startAnimationIfNecessary();
+      return;
+    }
+
+    var currentFrameCompletion = (_this.accumulatedTime - Math.floor(_this.accumulatedTime / msPerFrame) * msPerFrame) / msPerFrame
+;
+    var framesToCatchUp = Math.floor(_this.accumulatedTime / msPerFrame);
+
+    var _mergeAndSync3 = mergeAndSync(_this.props.willEnter, _this.props.willLeave, _this.props.didLeave, _this.state.mergedPropsStyles
+, destStyles, _this.state.currentStyles, _this.state.currentVelocities, _this.state.lastIdealStyles, _this.state.lastIdealVelocities
+);
+
+    var newMergedPropsStyles = _mergeAndSync3[0];
+    var newCurrentStyles = _mergeAndSync3[1];
+    var newCurrentVelocities = _mergeAndSync3[2];
+    var newLastIdealStyles = _mergeAndSync3[3];
+    var newLastIdealVelocities = _mergeAndSync3[4];
+
+    for (var i = 0; i &#x3c; newMergedPropsStyles.length; i++) {
+      var newMergedPropsStyle = newMergedPropsStyles[i].style;
+      var newCurrentStyle = {};
+      var newCurrentVelocity = {};
+      var newLastIdealStyle = {};
+      var newLastIdealVelocity = {};
+
+      for (var key in newMergedPropsStyle) {
+        if (!Object.prototype.hasOwnProperty.call(newMergedPropsStyle, key)) {
+          continue;
+        }
+
+        var styleValue = newMergedPropsStyle[key];
+        if (typeof styleValue === &#x27;number&#x27;) {
+          newCurrentStyle[key] = styleValue;
+          newCurrentVelocity[key] = 0;
+          newLastIdealStyle[key] = styleValue;
+          newLastIdealVelocity[key] = 0;
+        } else {
+          var newLastIdealStyleValue = newLastIdealStyles[i][key];
+          var newLastIdealVelocityValue = newLastIdealVelocities[i][key];
+          for (var j = 0; j &#x3c; framesToCatchUp; j++) {
+            var _stepper = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue
+.val, styleValue.stiffness, styleValue.damping, styleValue.precision);
+
+            newLastIdealStyleValue = _stepper[0];
+            newLastIdealVelocityValue = _stepper[1];
+          }
+
+          var _stepper2 = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.
+val, styleValue.stiffness, styleValue.damping, styleValue.precision);
+
+          var nextIdealX = _stepper2[0];
+          var nextIdealV = _stepper2[1];
+
+          newCurrentStyle[key] = newLastIdealStyleValue + (nextIdealX - newLastIdealStyleValue) * currentFrameCompletion;
+          newCurrentVelocity[key] = newLastIdealVelocityValue + (nextIdealV - newLastIdealVelocityValue) * currentFrameCompletion
+;
+          newLastIdealStyle[key] = newLastIdealStyleValue;
+          newLastIdealVelocity[key] = newLastIdealVelocityValue;
+        }
+      }
+
+      newLast ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-motion.TransitionMotion.prototype.__reactAutoBindPairs" id="apidoc.module.react-motion.TransitionMotion.prototype.__reactAutoBindPairs">module react-motion.TransitionMotion.prototype.__reactAutoBindPairs</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.TransitionMotion.prototype.__reactAutoBindPairs.1" id="apidoc.element.react-motion.TransitionMotion.prototype.__reactAutoBindPairs.1">
+        function <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.__reactAutoBindPairs.</span>1
+        <span class="apidocSignatureSpan">(unreadPropStyles)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function clearUnreadPropStyle(unreadPropStyles) {
+  var _mergeAndSync2 = mergeAndSync(this.props.willEnter, this.props.willLeave, this.props.didLeave, this.state.mergedPropsStyles
+, unreadPropStyles, this.state.currentStyles, this.state.currentVelocities, this.state.lastIdealStyles, this.state.lastIdealVelocities
+);
+
+  var mergedPropsStyles = _mergeAndSync2[0];
+  var currentStyles = _mergeAndSync2[1];
+  var currentVelocities = _mergeAndSync2[2];
+  var lastIdealStyles = _mergeAndSync2[3];
+  var lastIdealVelocities = _mergeAndSync2[4];
+
+  for (var i = 0; i &#x3c; unreadPropStyles.length; i++) {
+    var unreadPropStyle = unreadPropStyles[i].style;
+    var dirty = false;
+
+    for (var key in unreadPropStyle) {
+      if (!Object.prototype.hasOwnProperty.call(unreadPropStyle, key)) {
+        continue;
+      }
+
+      var styleValue = unreadPropStyle[key];
+      if (typeof styleValue === &#x27;number&#x27;) {
+        if (!dirty) {
+          dirty = true;
+          currentStyles[i] = _extends({}, currentStyles[i]);
+          currentVelocities[i] = _extends({}, currentVelocities[i]);
+          lastIdealStyles[i] = _extends({}, lastIdealStyles[i]);
+          lastIdealVelocities[i] = _extends({}, lastIdealVelocities[i]);
+          mergedPropsStyles[i] = {
+            key: mergedPropsStyles[i].key,
+            data: mergedPropsStyles[i].data,
+            style: _extends({}, mergedPropsStyles[i].style)
+          };
+        }
+        currentStyles[i][key] = styleValue;
+        currentVelocities[i][key] = 0;
+        lastIdealStyles[i][key] = styleValue;
+        lastIdealVelocities[i][key] = 0;
+        mergedPropsStyles[i].style[key] = styleValue;
+      }
+    }
+  }
+
+  // unlike the other 2 components, we can&#x27;t detect staleness and optionally
+  // opt out of setState here. each style object&#x27;s data might contain new
+  // stuff we&#x27;re not/cannot compare
+  this.setState({
+    currentStyles: currentStyles,
+    currentVelocities: currentVelocities,
+    mergedPropsStyles: mergedPropsStyles,
+    lastIdealStyles: lastIdealStyles,
+    lastIdealVelocities: lastIdealVelocities
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-motion.TransitionMotion.prototype.__reactAutoBindPairs.3" id="apidoc.element.react-motion.TransitionMotion.prototype.__reactAutoBindPairs.3">
+        function <span class="apidocSignatureSpan">react-motion.TransitionMotion.prototype.__reactAutoBindPairs.</span>3
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function startAnimationIfNecessary() {
+  var _this = this;
+
+  if (this.unmounting) {
+    return;
+  }
+  // TODO: when config is {a: 10} and dest is {a: 10} do we raf once and
+  // call cb? No, otherwise accidental parent rerender causes cb trigger
+  this.animationID = _raf2[&#x27;default&#x27;](function (timestamp) {
+    var propStyles = _this.props.styles;
+    var destStyles = typeof propStyles === &#x27;function&#x27; ? propStyles(rehydrateStyles(_this.state.mergedPropsStyles, _this.unreadPropStyles
+, _this.state.lastIdealStyles)) : propStyles;
+
+    // check if we need to animate in the first place
+    if (shouldStopAnimationAll(_this.state.currentStyles, destStyles, _this.state.currentVelocities, _this.state.mergedPropsStyles
+)) {
+      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      _this.animationID = null;
+      _this.accumulatedTime = 0;
+      return;
+    }
+
+    var currentTime = timestamp || _performanceNow2[&#x27;default&#x27;]();
+    var timeDelta = currentTime - _this.prevTime;
+    _this.prevTime = currentTime;
+    _this.accumulatedTime = _this.accumulatedTime + timeDelta;
+    // more than 10 frames? prolly switched browser tab. Restart
+    if (_this.accumulatedTime &#x3e; msPerFrame * 10) {
+      _this.accumulatedTime = 0;
+    }
+
+    if (_this.accumulatedTime === 0) {
+      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      _this.animationID = null;
+      _this.startAnimationIfNecessary();
+      return;
+    }
+
+    var currentFrameCompletion = (_this.accumulatedTime - Math.floor(_this.accumulatedTime / msPerFrame) * msPerFrame) / msPerFrame
+;
+    var framesToCatchUp = Math.floor(_this.accumulatedTime / msPerFrame);
+
+    var _mergeAndSync3 = mergeAndSync(_this.props.willEnter, _this.props.willLeave, _this.props.didLeave, _this.state.mergedPropsStyles
+, destStyles, _this.state.currentStyles, _this.state.currentVelocities, _this.state.lastIdealStyles, _this.state.lastIdealVelocities
+);
+
+    var newMergedPropsStyles = _mergeAndSync3[0];
+    var newCurrentStyles = _mergeAndSync3[1];
+    var newCurrentVelocities = _mergeAndSync3[2];
+    var newLastIdealStyles = _mergeAndSync3[3];
+    var newLastIdealVelocities = _mergeAndSync3[4];
+
+    for (var i = 0; i &#x3c; newMergedPropsStyles.length; i++) {
+      var newMergedPropsStyle = newMergedPropsStyles[i].style;
+      var newCurrentStyle = {};
+      var newCurrentVelocity = {};
+      var newLastIdealStyle = {};
+      var newLastIdealVelocity = {};
+
+      for (var key in newMergedPropsStyle) {
+        if (!Object.prototype.hasOwnProperty.call(newMergedPropsStyle, key)) {
+          continue;
+        }
+
+        var styleValue = newMergedPropsStyle[key];
+        if (typeof styleValue === &#x27;number&#x27;) {
+          newCurrentStyle[key] = styleValue;
+          newCurrentVelocity[key] = 0;
+          newLastIdealStyle[key] = styleValue;
+          newLastIdealVelocity[key] = 0;
+        } else {
+          var newLastIdealStyleValue = newLastIdealStyles[i][key];
+          var newLastIdealVelocityValue = newLastIdealVelocities[i][key];
+          for (var j = 0; j &#x3c; framesToCatchUp; j++) {
+            var _stepper = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue
+.val, styleValue.stiffness, styleValue.damping, styleValue.precision);
+
+            newLastIdealStyleValue = _stepper[0];
+            newLastIdealVelocityValue = _stepper[1];
+          }
+
+          var _stepper2 = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.
+val, styleValue.stiffness, styleValue.damping, styleValue.precision);
+
+          var nextIdealX = _stepper2[0];
+          var nextIdealV = _stepper2[1];
+
+          newCurrentStyle[key] = newLastIdealStyleValue + (nextIdealX - newLastIdealStyleValue) * currentFrameCompletion;
+          newCurrentVelocity[key] = newLastIdealVelocityValue + (nextIdealV - newLastIdealVelocityValue) * currentFrameCompletion
+;
+          newLastIdealStyle[key] = newLastIdealStyleValue;
+          newLastIdealVelocity[key] = newLastIdealVelocityValue;
+        }
+      }
+
+      newLast ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
