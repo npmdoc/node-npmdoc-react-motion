@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/chenglou/react-motion#readme"
-
-    >react-motion (v0.4.7)</a>
+    <a href="https://github.com/chenglou/react-motion#readme">react-motion (v0.4.7)</a>
 </h1>
 <h4>A spring that solves your animation problems.</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.react-motion">module react-motion</a><ol>
 
@@ -1831,9 +1824,9 @@
   // This constructor gets overridden by mocks. The argument is used
   // by mocks to assert on what gets mounted.
 
-  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
-    process.env.NODE_ENV !== &#x27;production&#x27; ? warning(this instanceof Constructor, &#x27;Something is calling a React component directly
-. Use a factory or &#x27; + &#x27;JSX instead. See: https://fb.me/react-legacyfactory&#x27;) : void 0;
+  if (process.env.NODE_ENV !== 'production') {
+    process.env.NODE_ENV !== 'production' ? warning(this instanceof Constructor, 'Something is calling a React component directly
+. Use a factory or ' + 'JSX instead. See: https://fb.me/react-legacyfactory') : void 0;
   }
 
   // Wire up auto-binding
@@ -1848,21 +1841,21 @@
 
   this.state = null;
 
-  // ReactClasses doesn&#x27;t have constructors. Instead, they use the
+  // ReactClasses doesn't have constructors. Instead, they use the
   // getInitialState and componentWillMount methods for initialization.
 
   var initialState = this.getInitialState ? this.getInitialState() : null;
-  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
-    // We allow auto-mocks to proceed as if they&#x27;re returning null.
-    if (initialState === undefined &#x26;&#x26; this.getInitialState._isMockFunction) {
+  if (process.env.NODE_ENV !== 'production') {
+    // We allow auto-mocks to proceed as if they're returning null.
+    if (initialState === undefined &amp;&amp; this.getInitialState._isMockFunction) {
       // This is probably bad practice. Consider warning here and
       // deprecating this convenience.
       initialState = null;
     }
   }
-  !(typeof initialState === &#x27;object&#x27; &#x26;&#x26; !Array.isArray(initialState)) ? process.env.NODE_ENV !== &#x27;production&#x27; ? invariant(false, &#x27;%
-s.getInitialState(): must return an object or null&#x27;, Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : _prodInvariant(&#x27;82&#x27;,
-Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
+  !(typeof initialState === 'object' &amp;&amp; !Array.isArray(initialState)) ? process.env.NODE_ENV !== 'production' ? invariant(false, '%
+s.getInitialState(): must return an object or null', Constructor.displayName || 'ReactCompositeComponent') : _prodInvariant('82',
+Constructor.displayName || 'ReactCompositeComponent') : void 0;
 
   this.state = initialState;
 }</pre></li>
@@ -1892,7 +1885,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     }
 
     var styleValue = destStyle[key];
-    if (typeof styleValue === &#x27;number&#x27;) {
+    if (typeof styleValue === 'number') {
       if (!dirty) {
         dirty = true;
         currentStyle = _extends({}, currentStyle);
@@ -1926,7 +1919,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function componentDidMount() {
-  this.prevTime = _performanceNow2[&#x27;default&#x27;]();
+  this.prevTime = _performanceNow2['default']();
   this.startAnimationIfNecessary();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -1943,13 +1936,13 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function componentWillReceiveProps(props) {
   if (this.unreadPropStyle != null) {
-    // previous props haven&#x27;t had the chance to be set yet; set them here
+    // previous props haven't had the chance to be set yet; set them here
     this.clearUnreadPropStyle(this.unreadPropStyle);
   }
 
   this.unreadPropStyle = props.style;
   if (this.animationID == null) {
-    this.prevTime = _performanceNow2[&#x27;default&#x27;]();
+    this.prevTime = _performanceNow2['default']();
     this.startAnimationIfNecessary();
   }
 }</pre></li>
@@ -1967,7 +1960,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function componentWillUnmount() {
   if (this.animationID != null) {
-    _raf2[&#x27;default&#x27;].cancel(this.animationID);
+    _raf2['default'].cancel(this.animationID);
     this.animationID = null;
   }
 }</pre></li>
@@ -1988,8 +1981,8 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
   var defaultStyle = _props.defaultStyle;
   var style = _props.style;
 
-  var currentStyle = defaultStyle || _stripStyle2[&#x27;default&#x27;](style);
-  var currentVelocity = _mapToZero2[&#x27;default&#x27;](currentStyle);
+  var currentStyle = defaultStyle || _stripStyle2['default'](style);
+  var currentVelocity = _mapToZero2['default'](currentStyle);
   return {
     currentStyle: currentStyle,
     currentVelocity: currentVelocity,
@@ -2011,7 +2004,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function render() {
   var renderedChildren = this.props.children(this.state.currentStyle);
-  return renderedChildren &#x26;&#x26; _react2[&#x27;default&#x27;].Children.only(renderedChildren);
+  return renderedChildren &amp;&amp; _react2['default'].Children.only(renderedChildren);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -2030,15 +2023,15 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
 
   // TODO: when config is {a: 10} and dest is {a: 10} do we raf once and
   // call cb? No, otherwise accidental parent rerender causes cb trigger
-  this.animationID = _raf2[&#x27;default&#x27;](function (timestamp) {
+  this.animationID = _raf2['default'](function (timestamp) {
     // check if we need to animate in the first place
     var propsStyle = _this.props.style;
-    if (_shouldStopAnimation2[&#x27;default&#x27;](_this.state.currentStyle, propsStyle, _this.state.currentVelocity)) {
-      if (_this.wasAnimating &#x26;&#x26; _this.props.onRest) {
+    if (_shouldStopAnimation2['default'](_this.state.currentStyle, propsStyle, _this.state.currentVelocity)) {
+      if (_this.wasAnimating &amp;&amp; _this.props.onRest) {
         _this.props.onRest();
       }
 
-      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      // no need to cancel animationID here; shouldn't have any in flight
       _this.animationID = null;
       _this.wasAnimating = false;
       _this.accumulatedTime = 0;
@@ -2047,17 +2040,17 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
 
     _this.wasAnimating = true;
 
-    var currentTime = timestamp || _performanceNow2[&#x27;default&#x27;]();
+    var currentTime = timestamp || _performanceNow2['default']();
     var timeDelta = currentTime - _this.prevTime;
     _this.prevTime = currentTime;
     _this.accumulatedTime = _this.accumulatedTime + timeDelta;
     // more than 10 frames? prolly switched browser tab. Restart
-    if (_this.accumulatedTime &#x3e; msPerFrame * 10) {
+    if (_this.accumulatedTime &gt; msPerFrame * 10) {
       _this.accumulatedTime = 0;
     }
 
     if (_this.accumulatedTime === 0) {
-      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      // no need to cancel animationID here; shouldn't have any in flight
       _this.animationID = null;
       _this.startAnimationIfNecessary();
       return;
@@ -2078,7 +2071,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
       }
 
       var styleValue = propsStyle[key];
-      if (typeof styleValue === &#x27;number&#x27;) {
+      if (typeof styleValue === 'number') {
         newCurrentStyle[key] = styleValue;
         newCurrentVelocity[key] = 0;
         newLastIdealStyle[key] = styleValue;
@@ -2086,15 +2079,15 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
       } else {
         var newLastIdealStyleValue = _this.state.lastIdealStyle[key];
         var newLastIdealVelocityValue = _this.state.lastIdealVelocity[key];
-        for (var i = 0; i &#x3c; framesToCatchUp; i++) {
-          var _stepper = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.val
+        for (var i = 0; i &lt; framesToCatchUp; i++) {
+          var _stepper = _stepper4['default'](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.val
 , styleValue.stiffness, styleValue.damping, styleValue.precision);
 
           newLastIdealStyleValue = _stepper[0];
           newLastIdealVelocityValue = _stepper[1];
         }
 
-        var _stepper2 = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.val
+        var _stepper2 = _stepper4['default'](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.val
 , styleValue.stiffness, styleValue.damping, styleValue.precision);
 
         var nextIdealX = _stepper2[0];
@@ -2108,7 +2101,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     }
 
     _this.animationID = null;
-    // the amount we&#x27;re looped over above
+    // the amount we're looped over above
     _this.accumulatedTime -= framesToCatchUp * msPerFrame;
 
     _this.setState({
@@ -2139,9 +2132,9 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
   // This constructor gets overridden by mocks. The argument is used
   // by mocks to assert on what gets mounted.
 
-  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
-    process.env.NODE_ENV !== &#x27;production&#x27; ? warning(this instanceof Constructor, &#x27;Something is calling a React component directly
-. Use a factory or &#x27; + &#x27;JSX instead. See: https://fb.me/react-legacyfactory&#x27;) : void 0;
+  if (process.env.NODE_ENV !== 'production') {
+    process.env.NODE_ENV !== 'production' ? warning(this instanceof Constructor, 'Something is calling a React component directly
+. Use a factory or ' + 'JSX instead. See: https://fb.me/react-legacyfactory') : void 0;
   }
 
   // Wire up auto-binding
@@ -2156,21 +2149,21 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
 
   this.state = null;
 
-  // ReactClasses doesn&#x27;t have constructors. Instead, they use the
+  // ReactClasses doesn't have constructors. Instead, they use the
   // getInitialState and componentWillMount methods for initialization.
 
   var initialState = this.getInitialState ? this.getInitialState() : null;
-  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
-    // We allow auto-mocks to proceed as if they&#x27;re returning null.
-    if (initialState === undefined &#x26;&#x26; this.getInitialState._isMockFunction) {
+  if (process.env.NODE_ENV !== 'production') {
+    // We allow auto-mocks to proceed as if they're returning null.
+    if (initialState === undefined &amp;&amp; this.getInitialState._isMockFunction) {
       // This is probably bad practice. Consider warning here and
       // deprecating this convenience.
       initialState = null;
     }
   }
-  !(typeof initialState === &#x27;object&#x27; &#x26;&#x26; !Array.isArray(initialState)) ? process.env.NODE_ENV !== &#x27;production&#x27; ? invariant(false, &#x27;%
-s.getInitialState(): must return an object or null&#x27;, Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : _prodInvariant(&#x27;82&#x27;,
-Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
+  !(typeof initialState === 'object' &amp;&amp; !Array.isArray(initialState)) ? process.env.NODE_ENV !== 'production' ? invariant(false, '%
+s.getInitialState(): must return an object or null', Constructor.displayName || 'ReactCompositeComponent') : _prodInvariant('82',
+Constructor.displayName || 'ReactCompositeComponent') : void 0;
 
   this.state = initialState;
 }</pre></li>
@@ -2194,7 +2187,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
   var lastIdealVelocities = _state.lastIdealVelocities;
 
   var someDirty = false;
-  for (var i = 0; i &#x3c; unreadPropStyles.length; i++) {
+  for (var i = 0; i &lt; unreadPropStyles.length; i++) {
     var unreadPropStyle = unreadPropStyles[i];
     var dirty = false;
 
@@ -2204,7 +2197,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
       }
 
       var styleValue = unreadPropStyle[key];
-      if (typeof styleValue === &#x27;number&#x27;) {
+      if (typeof styleValue === 'number') {
         if (!dirty) {
           dirty = true;
           someDirty = true;
@@ -2239,7 +2232,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function componentDidMount() {
-  this.prevTime = _performanceNow2[&#x27;default&#x27;]();
+  this.prevTime = _performanceNow2['default']();
   this.startAnimationIfNecessary();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -2256,13 +2249,13 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function componentWillReceiveProps(props) {
   if (this.unreadPropStyles != null) {
-    // previous props haven&#x27;t had the chance to be set yet; set them here
+    // previous props haven't had the chance to be set yet; set them here
     this.clearUnreadPropStyle(this.unreadPropStyles);
   }
 
   this.unreadPropStyles = props.styles(this.state.lastIdealStyles);
   if (this.animationID == null) {
-    this.prevTime = _performanceNow2[&#x27;default&#x27;]();
+    this.prevTime = _performanceNow2['default']();
     this.startAnimationIfNecessary();
   }
 }</pre></li>
@@ -2280,7 +2273,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function componentWillUnmount() {
   if (this.animationID != null) {
-    _raf2[&#x27;default&#x27;].cancel(this.animationID);
+    _raf2['default'].cancel(this.animationID);
     this.animationID = null;
   }
 }</pre></li>
@@ -2301,9 +2294,9 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
   var defaultStyles = _props.defaultStyles;
   var styles = _props.styles;
 
-  var currentStyles = defaultStyles || styles().map(_stripStyle2[&#x27;default&#x27;]);
+  var currentStyles = defaultStyles || styles().map(_stripStyle2['default']);
   var currentVelocities = currentStyles.map(function (currentStyle) {
-    return _mapToZero2[&#x27;default&#x27;](currentStyle);
+    return _mapToZero2['default'](currentStyle);
   });
   return {
     currentStyles: currentStyles,
@@ -2326,7 +2319,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function render() {
   var renderedChildren = this.props.children(this.state.currentStyles);
-  return renderedChildren &#x26;&#x26; _react2[&#x27;default&#x27;].Children.only(renderedChildren);
+  return renderedChildren &amp;&amp; _react2['default'].Children.only(renderedChildren);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -2345,28 +2338,28 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
 
   // TODO: when config is {a: 10} and dest is {a: 10} do we raf once and
   // call cb? No, otherwise accidental parent rerender causes cb trigger
-  this.animationID = _raf2[&#x27;default&#x27;](function (timestamp) {
+  this.animationID = _raf2['default'](function (timestamp) {
     var destStyles = _this.props.styles(_this.state.lastIdealStyles);
 
     // check if we need to animate in the first place
     if (shouldStopAnimationAll(_this.state.currentStyles, destStyles, _this.state.currentVelocities)) {
-      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      // no need to cancel animationID here; shouldn't have any in flight
       _this.animationID = null;
       _this.accumulatedTime = 0;
       return;
     }
 
-    var currentTime = timestamp || _performanceNow2[&#x27;default&#x27;]();
+    var currentTime = timestamp || _performanceNow2['default']();
     var timeDelta = currentTime - _this.prevTime;
     _this.prevTime = currentTime;
     _this.accumulatedTime = _this.accumulatedTime + timeDelta;
     // more than 10 frames? prolly switched browser tab. Restart
-    if (_this.accumulatedTime &#x3e; msPerFrame * 10) {
+    if (_this.accumulatedTime &gt; msPerFrame * 10) {
       _this.accumulatedTime = 0;
     }
 
     if (_this.accumulatedTime === 0) {
-      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      // no need to cancel animationID here; shouldn't have any in flight
       _this.animationID = null;
       _this.startAnimationIfNecessary();
       return;
@@ -2381,7 +2374,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     var newCurrentStyles = [];
     var newCurrentVelocities = [];
 
-    for (var i = 0; i &#x3c; destStyles.length; i++) {
+    for (var i = 0; i &lt; destStyles.length; i++) {
       var destStyle = destStyles[i];
       var newCurrentStyle = {};
       var newCurrentVelocity = {};
@@ -2394,7 +2387,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
         }
 
         var styleValue = destStyle[key];
-        if (typeof styleValue === &#x27;number&#x27;) {
+        if (typeof styleValue === 'number') {
           newCurrentStyle[key] = styleValue;
           newCurrentVelocity[key] = 0;
           newLastIdealStyle[key] = styleValue;
@@ -2402,15 +2395,15 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
         } else {
           var newLastIdealStyleValue = _this.state.lastIdealStyles[i][key];
           var newLastIdealVelocityValue = _this.state.lastIdealVelocities[i][key];
-          for (var j = 0; j &#x3c; framesToCatchUp; j++) {
-            var _stepper = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue
+          for (var j = 0; j &lt; framesToCatchUp; j++) {
+            var _stepper = _stepper4['default'](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue
 .val, styleValue.stiffness, styleValue.damping, styleValue.precision);
 
             newLastIdealStyleValue = _stepper[0];
             newLastIdealVelocityValue = _stepper[1];
           }
 
-          var _stepper2 = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.
+          var _stepper2 = _stepper4['default'](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.
 val, styleValue.stiffness, styleValue.damping, styleValue.precision);
 
           var nextIdealX = _stepper2[0];
@@ -2431,7 +2424,7 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
     }
 
     _this.animationID = null;
-    // the amount we&#x27;re looped over above
+    // the amount we're looped over above
     _this.accumulatedTime -= framesToCatchUp * msPerFrame;
 
     _this.setState({
@@ -2462,9 +2455,9 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
   // This constructor gets overridden by mocks. The argument is used
   // by mocks to assert on what gets mounted.
 
-  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
-    process.env.NODE_ENV !== &#x27;production&#x27; ? warning(this instanceof Constructor, &#x27;Something is calling a React component directly
-. Use a factory or &#x27; + &#x27;JSX instead. See: https://fb.me/react-legacyfactory&#x27;) : void 0;
+  if (process.env.NODE_ENV !== 'production') {
+    process.env.NODE_ENV !== 'production' ? warning(this instanceof Constructor, 'Something is calling a React component directly
+. Use a factory or ' + 'JSX instead. See: https://fb.me/react-legacyfactory') : void 0;
   }
 
   // Wire up auto-binding
@@ -2479,21 +2472,21 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
 
   this.state = null;
 
-  // ReactClasses doesn&#x27;t have constructors. Instead, they use the
+  // ReactClasses doesn't have constructors. Instead, they use the
   // getInitialState and componentWillMount methods for initialization.
 
   var initialState = this.getInitialState ? this.getInitialState() : null;
-  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
-    // We allow auto-mocks to proceed as if they&#x27;re returning null.
-    if (initialState === undefined &#x26;&#x26; this.getInitialState._isMockFunction) {
+  if (process.env.NODE_ENV !== 'production') {
+    // We allow auto-mocks to proceed as if they're returning null.
+    if (initialState === undefined &amp;&amp; this.getInitialState._isMockFunction) {
       // This is probably bad practice. Consider warning here and
       // deprecating this convenience.
       initialState = null;
     }
   }
-  !(typeof initialState === &#x27;object&#x27; &#x26;&#x26; !Array.isArray(initialState)) ? process.env.NODE_ENV !== &#x27;production&#x27; ? invariant(false, &#x27;%
-s.getInitialState(): must return an object or null&#x27;, Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : _prodInvariant(&#x27;82&#x27;,
-Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
+  !(typeof initialState === 'object' &amp;&amp; !Array.isArray(initialState)) ? process.env.NODE_ENV !== 'production' ? invariant(false, '%
+s.getInitialState(): must return an object or null', Constructor.displayName || 'ReactCompositeComponent') : _prodInvariant('82',
+Constructor.displayName || 'ReactCompositeComponent') : void 0;
 
   this.state = initialState;
 }</pre></li>
@@ -2512,7 +2505,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     <li>description and source-code<pre class="apidocCodePre">function getDefaultProps() {
   return {
     willEnter: function willEnter(styleThatEntered) {
-      return _stripStyle2[&#x27;default&#x27;](styleThatEntered.style);
+      return _stripStyle2['default'](styleThatEntered.style);
     },
     // recall: returning null makes the current unmounting TransitionStyle
     // disappear immediately
@@ -2545,7 +2538,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
   var lastIdealStyles = _mergeAndSync2[3];
   var lastIdealVelocities = _mergeAndSync2[4];
 
-  for (var i = 0; i &#x3c; unreadPropStyles.length; i++) {
+  for (var i = 0; i &lt; unreadPropStyles.length; i++) {
     var unreadPropStyle = unreadPropStyles[i].style;
     var dirty = false;
 
@@ -2555,7 +2548,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
       }
 
       var styleValue = unreadPropStyle[key];
-      if (typeof styleValue === &#x27;number&#x27;) {
+      if (typeof styleValue === 'number') {
         if (!dirty) {
           dirty = true;
           currentStyles[i] = _extends({}, currentStyles[i]);
@@ -2577,9 +2570,9 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     }
   }
 
-  // unlike the other 2 components, we can&#x27;t detect staleness and optionally
-  // opt out of setState here. each style object&#x27;s data might contain new
-  // stuff we&#x27;re not/cannot compare
+  // unlike the other 2 components, we can't detect staleness and optionally
+  // opt out of setState here. each style object's data might contain new
+  // stuff we're not/cannot compare
   this.setState({
     currentStyles: currentStyles,
     currentVelocities: currentVelocities,
@@ -2601,7 +2594,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function componentDidMount() {
-  this.prevTime = _performanceNow2[&#x27;default&#x27;]();
+  this.prevTime = _performanceNow2['default']();
   this.startAnimationIfNecessary();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -2618,12 +2611,12 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function componentWillReceiveProps(props) {
   if (this.unreadPropStyles) {
-    // previous props haven&#x27;t had the chance to be set yet; set them here
+    // previous props haven't had the chance to be set yet; set them here
     this.clearUnreadPropStyle(this.unreadPropStyles);
   }
 
   var styles = props.styles;
-  if (typeof styles === &#x27;function&#x27;) {
+  if (typeof styles === 'function') {
     this.unreadPropStyles = styles(rehydrateStyles(this.state.mergedPropsStyles, this.unreadPropStyles, this.state.lastIdealStyles
 ));
   } else {
@@ -2631,7 +2624,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
   }
 
   if (this.animationID == null) {
-    this.prevTime = _performanceNow2[&#x27;default&#x27;]();
+    this.prevTime = _performanceNow2['default']();
     this.startAnimationIfNecessary();
   }
 }</pre></li>
@@ -2650,7 +2643,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     <li>description and source-code<pre class="apidocCodePre">function componentWillUnmount() {
   this.unmounting = true;
   if (this.animationID != null) {
-    _raf2[&#x27;default&#x27;].cancel(this.animationID);
+    _raf2['default'].cancel(this.animationID);
     this.animationID = null;
   }
 }</pre></li>
@@ -2674,11 +2667,11 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
   var willLeave = _props.willLeave;
   var didLeave = _props.didLeave;
 
-  var destStyles = typeof styles === &#x27;function&#x27; ? styles(defaultStyles) : styles;
+  var destStyles = typeof styles === 'function' ? styles(defaultStyles) : styles;
 
-  // this is special. for the first time around, we don&#x27;t have a comparison
-  // between last (no last) and current merged props. we&#x27;ll compute last so:
-  // say default is {a, b} and styles (dest style) is {b, c}, we&#x27;ll
+  // this is special. for the first time around, we don't have a comparison
+  // between last (no last) and current merged props. we'll compute last so:
+  // say default is {a, b} and styles (dest style) is {b, c}, we'll
   // fabricate last as {a, b}
   var oldMergedPropsStyles = undefined;
   if (defaultStyles == null) {
@@ -2686,7 +2679,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
   } else {
     oldMergedPropsStyles = defaultStyles.map(function (defaultStyleCell) {
       // TODO: key search code
-      for (var i = 0; i &#x3c; destStyles.length; i++) {
+      for (var i = 0; i &lt; destStyles.length; i++) {
         if (destStyles[i].key === defaultStyleCell.key) {
           return destStyles[i];
         }
@@ -2695,18 +2688,18 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     });
   }
   var oldCurrentStyles = defaultStyles == null ? destStyles.map(function (s) {
-    return _stripStyle2[&#x27;default&#x27;](s.style);
+    return _stripStyle2['default'](s.style);
   }) : defaultStyles.map(function (s) {
-    return _stripStyle2[&#x27;default&#x27;](s.style);
+    return _stripStyle2['default'](s.style);
   });
   var oldCurrentVelocities = defaultStyles == null ? destStyles.map(function (s) {
-    return _mapToZero2[&#x27;default&#x27;](s.style);
+    return _mapToZero2['default'](s.style);
   }) : defaultStyles.map(function (s) {
-    return _mapToZero2[&#x27;default&#x27;](s.style);
+    return _mapToZero2['default'](s.style);
   });
 
   var _mergeAndSync = mergeAndSync(
-  // Because this is an old-style React.createClass component, Flow doesn&#x27;t
+  // Because this is an old-style React.createClass component, Flow doesn't
   // understand that the willEnter and willLeave props have default values
   // and will always be present.
   willEnter, willLeave, didLeave, oldMergedPropsStyles, destStyles, oldCurrentStyles, oldCurrentVelocities, oldCurrentStyles, //
@@ -2743,7 +2736,7 @@ oldLastIdealStyles really
     <li>description and source-code<pre class="apidocCodePre">function render() {
   var hydratedStyles = rehydrateStyles(this.state.mergedPropsStyles, this.unreadPropStyles, this.state.currentStyles);
   var renderedChildren = this.props.children(hydratedStyles);
-  return renderedChildren &#x26;&#x26; _react2[&#x27;default&#x27;].Children.only(renderedChildren);
+  return renderedChildren &amp;&amp; _react2['default'].Children.only(renderedChildren);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -2765,31 +2758,31 @@ oldLastIdealStyles really
   }
   // TODO: when config is {a: 10} and dest is {a: 10} do we raf once and
   // call cb? No, otherwise accidental parent rerender causes cb trigger
-  this.animationID = _raf2[&#x27;default&#x27;](function (timestamp) {
+  this.animationID = _raf2['default'](function (timestamp) {
     var propStyles = _this.props.styles;
-    var destStyles = typeof propStyles === &#x27;function&#x27; ? propStyles(rehydrateStyles(_this.state.mergedPropsStyles, _this.unreadPropStyles
+    var destStyles = typeof propStyles === 'function' ? propStyles(rehydrateStyles(_this.state.mergedPropsStyles, _this.unreadPropStyles
 , _this.state.lastIdealStyles)) : propStyles;
 
     // check if we need to animate in the first place
     if (shouldStopAnimationAll(_this.state.currentStyles, destStyles, _this.state.currentVelocities, _this.state.mergedPropsStyles
 )) {
-      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      // no need to cancel animationID here; shouldn't have any in flight
       _this.animationID = null;
       _this.accumulatedTime = 0;
       return;
     }
 
-    var currentTime = timestamp || _performanceNow2[&#x27;default&#x27;]();
+    var currentTime = timestamp || _performanceNow2['default']();
     var timeDelta = currentTime - _this.prevTime;
     _this.prevTime = currentTime;
     _this.accumulatedTime = _this.accumulatedTime + timeDelta;
     // more than 10 frames? prolly switched browser tab. Restart
-    if (_this.accumulatedTime &#x3e; msPerFrame * 10) {
+    if (_this.accumulatedTime &gt; msPerFrame * 10) {
       _this.accumulatedTime = 0;
     }
 
     if (_this.accumulatedTime === 0) {
-      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      // no need to cancel animationID here; shouldn't have any in flight
       _this.animationID = null;
       _this.startAnimationIfNecessary();
       return;
@@ -2809,7 +2802,7 @@ oldLastIdealStyles really
     var newLastIdealStyles = _mergeAndSync3[3];
     var newLastIdealVelocities = _mergeAndSync3[4];
 
-    for (var i = 0; i &#x3c; newMergedPropsStyles.length; i++) {
+    for (var i = 0; i &lt; newMergedPropsStyles.length; i++) {
       var newMergedPropsStyle = newMergedPropsStyles[i].style;
       var newCurrentStyle = {};
       var newCurrentVelocity = {};
@@ -2822,7 +2815,7 @@ oldLastIdealStyles really
         }
 
         var styleValue = newMergedPropsStyle[key];
-        if (typeof styleValue === &#x27;number&#x27;) {
+        if (typeof styleValue === 'number') {
           newCurrentStyle[key] = styleValue;
           newCurrentVelocity[key] = 0;
           newLastIdealStyle[key] = styleValue;
@@ -2830,15 +2823,15 @@ oldLastIdealStyles really
         } else {
           var newLastIdealStyleValue = newLastIdealStyles[i][key];
           var newLastIdealVelocityValue = newLastIdealVelocities[i][key];
-          for (var j = 0; j &#x3c; framesToCatchUp; j++) {
-            var _stepper = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue
+          for (var j = 0; j &lt; framesToCatchUp; j++) {
+            var _stepper = _stepper4['default'](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue
 .val, styleValue.stiffness, styleValue.damping, styleValue.precision);
 
             newLastIdealStyleValue = _stepper[0];
             newLastIdealVelocityValue = _stepper[1];
           }
 
-          var _stepper2 = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.
+          var _stepper2 = _stepper4['default'](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.
 val, styleValue.stiffness, styleValue.damping, styleValue.precision);
 
           var nextIdealX = _stepper2[0];
@@ -2887,28 +2880,28 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function mergeDiff(prev, next, onRemove) {
-  // bookkeeping for easier access of a key&#x27;s index below. This is 2 allocations +
+  // bookkeeping for easier access of a key's index below. This is 2 allocations +
   // potentially triggering chrome hash map mode for objs (so it might be faster
 
   var prevKeyIndex = {};
-  for (var i = 0; i &#x3c; prev.length; i++) {
+  for (var i = 0; i &lt; prev.length; i++) {
     prevKeyIndex[prev[i].key] = i;
   }
   var nextKeyIndex = {};
-  for (var i = 0; i &#x3c; next.length; i++) {
+  for (var i = 0; i &lt; next.length; i++) {
     nextKeyIndex[next[i].key] = i;
   }
 
   // first, an overly elaborate way of merging prev and next, eliminating
-  // duplicates (in terms of keys). If there&#x27;s dupe, keep the item in next).
+  // duplicates (in terms of keys). If there's dupe, keep the item in next).
   // This way of writing it saves allocations
   var ret = [];
-  for (var i = 0; i &#x3c; next.length; i++) {
+  for (var i = 0; i &lt; next.length; i++) {
     ret[i] = next[i];
   }
-  for (var i = 0; i &#x3c; prev.length; i++) {
+  for (var i = 0; i &lt; prev.length; i++) {
     if (!Object.prototype.hasOwnProperty.call(nextKeyIndex, prev[i].key)) {
-      // this is called my TM&#x27;s `mergeAndSync`, which calls willLeave. We don&#x27;t
+      // this is called my TM's `mergeAndSync`, which calls willLeave. We don't
       // merge in keys that the user desires to kill
       var fill = onRemove(i, prev[i]);
       if (fill != null) {
@@ -2924,28 +2917,28 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
     var prevOrderA = prevKeyIndex[a.key];
     var prevOrderB = prevKeyIndex[b.key];
 
-    if (nextOrderA != null &#x26;&#x26; nextOrderB != null) {
+    if (nextOrderA != null &amp;&amp; nextOrderB != null) {
       // both keys in next
       return nextKeyIndex[a.key] - nextKeyIndex[b.key];
-    } else if (prevOrderA != null &#x26;&#x26; prevOrderB != null) {
+    } else if (prevOrderA != null &amp;&amp; prevOrderB != null) {
       // both keys in prev
       return prevKeyIndex[a.key] - prevKeyIndex[b.key];
     } else if (nextOrderA != null) {
       // key a in next, key b in prev
 
-      // how to determine the order between a and b? We find a &#x22;pivot&#x22; (term
+      // how to determine the order between a and b? We find a "pivot" (term
       // abuse), a key present in both prev and next, that is sandwiched between
-      // a and b. In the context of our above example, if we&#x27;re comparing a and
-      // d, b&#x27;s (the only) pivot
-      for (var i = 0; i &#x3c; next.length; i++) {
+      // a and b. In the context of our above example, if we're comparing a and
+      // d, b's (the only) pivot
+      for (var i = 0; i &lt; next.length; i++) {
         var pivot = next[i].key;
         if (!Object.prototype.hasOwnProperty.call(prevKeyIndex, pivot)) {
           continue;
         }
 
-        if (nextOrderA &#x3c; nextKeyIndex[pivot] &#x26;&#x26; prevOrderB &#x3e; prevKeyIndex[pivot]) {
+        if (nextOrderA &lt; nextKeyIndex[pivot] &amp;&amp; prevOrderB &gt; prevKeyIndex[pivot]) {
           return -1;
-        } else if (nextOrderA &#x3e; nextKeyIndex[pivot] &#x26;&#x26; prevOrderB &#x3c; prevKeyIndex[pivot]) {
+        } else if (nextOrderA &gt; nextKeyIndex[pivot] &amp;&amp; prevOrderB &lt; prevKeyIndex[pivot]) {
           return 1;
         }
       }
@@ -2953,14 +2946,14 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
       return 1;
     }
     // prevOrderA, nextOrderB
-    for (var i = 0; i &#x3c; next.length; i++) {
+    for (var i = 0; i &lt; next.length; i++) {
       var pivot = next[i].key;
       if (!Object.prototype.hasOwnProperty.call(prevKeyIndex, pivot)) {
         continue;
       }
-      if (nextOrderB &#x3c; nextKeyIndex[pivot] &#x26;&#x26; prevOrderA &#x3e; prevKeyIndex[pivot]) {
+      if (nextOrderB &lt; nextKeyIndex[pivot] &amp;&amp; prevOrderA &gt; prevKeyIndex[pivot]) {
         return 1;
-      } else if (nextOrderB &#x3e; nextKeyIndex[pivot] &#x26;&#x26; prevOrderA &#x3c; prevKeyIndex[pivot]) {
+      } else if (nextOrderB &gt; nextKeyIndex[pivot] &amp;&amp; prevOrderA &lt; prevKeyIndex[pivot]) {
         return -1;
       }
     }
@@ -2981,10 +2974,10 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function reorderKeys() {
-  if (process.env.NODE_ENV === &#x27;development&#x27;) {
+  if (process.env.NODE_ENV === 'development') {
     if (!hasWarned) {
       hasWarned = true;
-      console.error(&#x27;`reorderKeys` has been removed, since it is no longer needed for TransitionMotion\&#x27;s new styles array API.&#x27;);
+      console.error('`reorderKeys` has been removed, since it is no longer needed for TransitionMotion\'s new styles array API.');
     }
   }
 }</pre></li>
@@ -3010,9 +3003,9 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
       return false;
     }
 
-    var styleValue = typeof style[key] === &#x27;number&#x27; ? style[key] : style[key].val;
+    var styleValue = typeof style[key] === 'number' ? style[key] : style[key].val;
     // stepper will have already taken care of rounding precision errors, so
-    // won&#x27;t have such thing as 0.9999 !=== 1
+    // won't have such thing as 0.9999 !=== 1
     if (currentStyle[key] !== styleValue) {
       return false;
     }
@@ -3065,7 +3058,7 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
   var newV = v + a * secondPerFrame;
   var newX = x + newV * secondPerFrame;
 
-  if (Math.abs(newV) &#x3c; precision &#x26;&#x26; Math.abs(newX - destX) &#x3c; precision) {
+  if (Math.abs(newV) &lt; precision &amp;&amp; Math.abs(newX - destX) &lt; precision) {
     reusedTuple[0] = destX;
     reusedTuple[1] = 0;
     return reusedTuple;
@@ -3093,7 +3086,7 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
     if (!Object.prototype.hasOwnProperty.call(style, key)) {
       continue;
     }
-    ret[key] = typeof style[key] === &#x27;number&#x27; ? style[key] : style[key].val;
+    ret[key] = typeof style[key] === 'number' ? style[key] : style[key].val;
   }
   return ret;
 }</pre></li>
@@ -3140,9 +3133,9 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
   // This constructor gets overridden by mocks. The argument is used
   // by mocks to assert on what gets mounted.
 
-  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
-    process.env.NODE_ENV !== &#x27;production&#x27; ? warning(this instanceof Constructor, &#x27;Something is calling a React component directly
-. Use a factory or &#x27; + &#x27;JSX instead. See: https://fb.me/react-legacyfactory&#x27;) : void 0;
+  if (process.env.NODE_ENV !== 'production') {
+    process.env.NODE_ENV !== 'production' ? warning(this instanceof Constructor, 'Something is calling a React component directly
+. Use a factory or ' + 'JSX instead. See: https://fb.me/react-legacyfactory') : void 0;
   }
 
   // Wire up auto-binding
@@ -3157,21 +3150,21 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
 
   this.state = null;
 
-  // ReactClasses doesn&#x27;t have constructors. Instead, they use the
+  // ReactClasses doesn't have constructors. Instead, they use the
   // getInitialState and componentWillMount methods for initialization.
 
   var initialState = this.getInitialState ? this.getInitialState() : null;
-  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
-    // We allow auto-mocks to proceed as if they&#x27;re returning null.
-    if (initialState === undefined &#x26;&#x26; this.getInitialState._isMockFunction) {
+  if (process.env.NODE_ENV !== 'production') {
+    // We allow auto-mocks to proceed as if they're returning null.
+    if (initialState === undefined &amp;&amp; this.getInitialState._isMockFunction) {
       // This is probably bad practice. Consider warning here and
       // deprecating this convenience.
       initialState = null;
     }
   }
-  !(typeof initialState === &#x27;object&#x27; &#x26;&#x26; !Array.isArray(initialState)) ? process.env.NODE_ENV !== &#x27;production&#x27; ? invariant(false, &#x27;%
-s.getInitialState(): must return an object or null&#x27;, Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : _prodInvariant(&#x27;82&#x27;,
-Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
+  !(typeof initialState === 'object' &amp;&amp; !Array.isArray(initialState)) ? process.env.NODE_ENV !== 'production' ? invariant(false, '%
+s.getInitialState(): must return an object or null', Constructor.displayName || 'ReactCompositeComponent') : _prodInvariant('82',
+Constructor.displayName || 'ReactCompositeComponent') : void 0;
 
   this.state = initialState;
 }</pre></li>
@@ -3269,7 +3262,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     }
 
     var styleValue = destStyle[key];
-    if (typeof styleValue === &#x27;number&#x27;) {
+    if (typeof styleValue === 'number') {
       if (!dirty) {
         dirty = true;
         currentStyle = _extends({}, currentStyle);
@@ -3303,7 +3296,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function componentDidMount() {
-  this.prevTime = _performanceNow2[&#x27;default&#x27;]();
+  this.prevTime = _performanceNow2['default']();
   this.startAnimationIfNecessary();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -3320,13 +3313,13 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function componentWillReceiveProps(props) {
   if (this.unreadPropStyle != null) {
-    // previous props haven&#x27;t had the chance to be set yet; set them here
+    // previous props haven't had the chance to be set yet; set them here
     this.clearUnreadPropStyle(this.unreadPropStyle);
   }
 
   this.unreadPropStyle = props.style;
   if (this.animationID == null) {
-    this.prevTime = _performanceNow2[&#x27;default&#x27;]();
+    this.prevTime = _performanceNow2['default']();
     this.startAnimationIfNecessary();
   }
 }</pre></li>
@@ -3344,7 +3337,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function componentWillUnmount() {
   if (this.animationID != null) {
-    _raf2[&#x27;default&#x27;].cancel(this.animationID);
+    _raf2['default'].cancel(this.animationID);
     this.animationID = null;
   }
 }</pre></li>
@@ -3364,9 +3357,9 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
   // This constructor gets overridden by mocks. The argument is used
   // by mocks to assert on what gets mounted.
 
-  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
-    process.env.NODE_ENV !== &#x27;production&#x27; ? warning(this instanceof Constructor, &#x27;Something is calling a React component directly
-. Use a factory or &#x27; + &#x27;JSX instead. See: https://fb.me/react-legacyfactory&#x27;) : void 0;
+  if (process.env.NODE_ENV !== 'production') {
+    process.env.NODE_ENV !== 'production' ? warning(this instanceof Constructor, 'Something is calling a React component directly
+. Use a factory or ' + 'JSX instead. See: https://fb.me/react-legacyfactory') : void 0;
   }
 
   // Wire up auto-binding
@@ -3381,21 +3374,21 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
 
   this.state = null;
 
-  // ReactClasses doesn&#x27;t have constructors. Instead, they use the
+  // ReactClasses doesn't have constructors. Instead, they use the
   // getInitialState and componentWillMount methods for initialization.
 
   var initialState = this.getInitialState ? this.getInitialState() : null;
-  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
-    // We allow auto-mocks to proceed as if they&#x27;re returning null.
-    if (initialState === undefined &#x26;&#x26; this.getInitialState._isMockFunction) {
+  if (process.env.NODE_ENV !== 'production') {
+    // We allow auto-mocks to proceed as if they're returning null.
+    if (initialState === undefined &amp;&amp; this.getInitialState._isMockFunction) {
       // This is probably bad practice. Consider warning here and
       // deprecating this convenience.
       initialState = null;
     }
   }
-  !(typeof initialState === &#x27;object&#x27; &#x26;&#x26; !Array.isArray(initialState)) ? process.env.NODE_ENV !== &#x27;production&#x27; ? invariant(false, &#x27;%
-s.getInitialState(): must return an object or null&#x27;, Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : _prodInvariant(&#x27;82&#x27;,
-Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
+  !(typeof initialState === 'object' &amp;&amp; !Array.isArray(initialState)) ? process.env.NODE_ENV !== 'production' ? invariant(false, '%
+s.getInitialState(): must return an object or null', Constructor.displayName || 'ReactCompositeComponent') : _prodInvariant('82',
+Constructor.displayName || 'ReactCompositeComponent') : void 0;
 
   this.state = initialState;
 }</pre></li>
@@ -3416,8 +3409,8 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
   var defaultStyle = _props.defaultStyle;
   var style = _props.style;
 
-  var currentStyle = defaultStyle || _stripStyle2[&#x27;default&#x27;](style);
-  var currentVelocity = _mapToZero2[&#x27;default&#x27;](currentStyle);
+  var currentStyle = defaultStyle || _stripStyle2['default'](style);
+  var currentVelocity = _mapToZero2['default'](currentStyle);
   return {
     currentStyle: currentStyle,
     currentVelocity: currentVelocity,
@@ -3439,7 +3432,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function render() {
   var renderedChildren = this.props.children(this.state.currentStyle);
-  return renderedChildren &#x26;&#x26; _react2[&#x27;default&#x27;].Children.only(renderedChildren);
+  return renderedChildren &amp;&amp; _react2['default'].Children.only(renderedChildren);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3458,15 +3451,15 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
 
   // TODO: when config is {a: 10} and dest is {a: 10} do we raf once and
   // call cb? No, otherwise accidental parent rerender causes cb trigger
-  this.animationID = _raf2[&#x27;default&#x27;](function (timestamp) {
+  this.animationID = _raf2['default'](function (timestamp) {
     // check if we need to animate in the first place
     var propsStyle = _this.props.style;
-    if (_shouldStopAnimation2[&#x27;default&#x27;](_this.state.currentStyle, propsStyle, _this.state.currentVelocity)) {
-      if (_this.wasAnimating &#x26;&#x26; _this.props.onRest) {
+    if (_shouldStopAnimation2['default'](_this.state.currentStyle, propsStyle, _this.state.currentVelocity)) {
+      if (_this.wasAnimating &amp;&amp; _this.props.onRest) {
         _this.props.onRest();
       }
 
-      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      // no need to cancel animationID here; shouldn't have any in flight
       _this.animationID = null;
       _this.wasAnimating = false;
       _this.accumulatedTime = 0;
@@ -3475,17 +3468,17 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
 
     _this.wasAnimating = true;
 
-    var currentTime = timestamp || _performanceNow2[&#x27;default&#x27;]();
+    var currentTime = timestamp || _performanceNow2['default']();
     var timeDelta = currentTime - _this.prevTime;
     _this.prevTime = currentTime;
     _this.accumulatedTime = _this.accumulatedTime + timeDelta;
     // more than 10 frames? prolly switched browser tab. Restart
-    if (_this.accumulatedTime &#x3e; msPerFrame * 10) {
+    if (_this.accumulatedTime &gt; msPerFrame * 10) {
       _this.accumulatedTime = 0;
     }
 
     if (_this.accumulatedTime === 0) {
-      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      // no need to cancel animationID here; shouldn't have any in flight
       _this.animationID = null;
       _this.startAnimationIfNecessary();
       return;
@@ -3506,7 +3499,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
       }
 
       var styleValue = propsStyle[key];
-      if (typeof styleValue === &#x27;number&#x27;) {
+      if (typeof styleValue === 'number') {
         newCurrentStyle[key] = styleValue;
         newCurrentVelocity[key] = 0;
         newLastIdealStyle[key] = styleValue;
@@ -3514,15 +3507,15 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
       } else {
         var newLastIdealStyleValue = _this.state.lastIdealStyle[key];
         var newLastIdealVelocityValue = _this.state.lastIdealVelocity[key];
-        for (var i = 0; i &#x3c; framesToCatchUp; i++) {
-          var _stepper = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.val
+        for (var i = 0; i &lt; framesToCatchUp; i++) {
+          var _stepper = _stepper4['default'](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.val
 , styleValue.stiffness, styleValue.damping, styleValue.precision);
 
           newLastIdealStyleValue = _stepper[0];
           newLastIdealVelocityValue = _stepper[1];
         }
 
-        var _stepper2 = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.val
+        var _stepper2 = _stepper4['default'](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.val
 , styleValue.stiffness, styleValue.damping, styleValue.precision);
 
         var nextIdealX = _stepper2[0];
@@ -3536,7 +3529,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     }
 
     _this.animationID = null;
-    // the amount we&#x27;re looped over above
+    // the amount we're looped over above
     _this.accumulatedTime -= framesToCatchUp * msPerFrame;
 
     _this.setState({
@@ -3616,7 +3609,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     }
 
     var styleValue = destStyle[key];
-    if (typeof styleValue === &#x27;number&#x27;) {
+    if (typeof styleValue === 'number') {
       if (!dirty) {
         dirty = true;
         currentStyle = _extends({}, currentStyle);
@@ -3654,15 +3647,15 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
 
   // TODO: when config is {a: 10} and dest is {a: 10} do we raf once and
   // call cb? No, otherwise accidental parent rerender causes cb trigger
-  this.animationID = _raf2[&#x27;default&#x27;](function (timestamp) {
+  this.animationID = _raf2['default'](function (timestamp) {
     // check if we need to animate in the first place
     var propsStyle = _this.props.style;
-    if (_shouldStopAnimation2[&#x27;default&#x27;](_this.state.currentStyle, propsStyle, _this.state.currentVelocity)) {
-      if (_this.wasAnimating &#x26;&#x26; _this.props.onRest) {
+    if (_shouldStopAnimation2['default'](_this.state.currentStyle, propsStyle, _this.state.currentVelocity)) {
+      if (_this.wasAnimating &amp;&amp; _this.props.onRest) {
         _this.props.onRest();
       }
 
-      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      // no need to cancel animationID here; shouldn't have any in flight
       _this.animationID = null;
       _this.wasAnimating = false;
       _this.accumulatedTime = 0;
@@ -3671,17 +3664,17 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
 
     _this.wasAnimating = true;
 
-    var currentTime = timestamp || _performanceNow2[&#x27;default&#x27;]();
+    var currentTime = timestamp || _performanceNow2['default']();
     var timeDelta = currentTime - _this.prevTime;
     _this.prevTime = currentTime;
     _this.accumulatedTime = _this.accumulatedTime + timeDelta;
     // more than 10 frames? prolly switched browser tab. Restart
-    if (_this.accumulatedTime &#x3e; msPerFrame * 10) {
+    if (_this.accumulatedTime &gt; msPerFrame * 10) {
       _this.accumulatedTime = 0;
     }
 
     if (_this.accumulatedTime === 0) {
-      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      // no need to cancel animationID here; shouldn't have any in flight
       _this.animationID = null;
       _this.startAnimationIfNecessary();
       return;
@@ -3702,7 +3695,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
       }
 
       var styleValue = propsStyle[key];
-      if (typeof styleValue === &#x27;number&#x27;) {
+      if (typeof styleValue === 'number') {
         newCurrentStyle[key] = styleValue;
         newCurrentVelocity[key] = 0;
         newLastIdealStyle[key] = styleValue;
@@ -3710,15 +3703,15 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
       } else {
         var newLastIdealStyleValue = _this.state.lastIdealStyle[key];
         var newLastIdealVelocityValue = _this.state.lastIdealVelocity[key];
-        for (var i = 0; i &#x3c; framesToCatchUp; i++) {
-          var _stepper = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.val
+        for (var i = 0; i &lt; framesToCatchUp; i++) {
+          var _stepper = _stepper4['default'](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.val
 , styleValue.stiffness, styleValue.damping, styleValue.precision);
 
           newLastIdealStyleValue = _stepper[0];
           newLastIdealVelocityValue = _stepper[1];
         }
 
-        var _stepper2 = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.val
+        var _stepper2 = _stepper4['default'](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.val
 , styleValue.stiffness, styleValue.damping, styleValue.precision);
 
         var nextIdealX = _stepper2[0];
@@ -3732,7 +3725,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     }
 
     _this.animationID = null;
-    // the amount we&#x27;re looped over above
+    // the amount we're looped over above
     _this.accumulatedTime -= framesToCatchUp * msPerFrame;
 
     _this.setState({
@@ -3782,7 +3775,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     }
 
     var styleValue = destStyle[key];
-    if (typeof styleValue === &#x27;number&#x27;) {
+    if (typeof styleValue === 'number') {
       if (!dirty) {
         dirty = true;
         currentStyle = _extends({}, currentStyle);
@@ -3821,7 +3814,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function componentDidMount() {
-  this.prevTime = _performanceNow2[&#x27;default&#x27;]();
+  this.prevTime = _performanceNow2['default']();
   this.startAnimationIfNecessary();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -3845,13 +3838,13 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function componentWillReceiveProps(props) {
   if (this.unreadPropStyle != null) {
-    // previous props haven&#x27;t had the chance to be set yet; set them here
+    // previous props haven't had the chance to be set yet; set them here
     this.clearUnreadPropStyle(this.unreadPropStyle);
   }
 
   this.unreadPropStyle = props.style;
   if (this.animationID == null) {
-    this.prevTime = _performanceNow2[&#x27;default&#x27;]();
+    this.prevTime = _performanceNow2['default']();
     this.startAnimationIfNecessary();
   }
 }</pre></li>
@@ -3876,7 +3869,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function componentWillUnmount() {
   if (this.animationID != null) {
-    _raf2[&#x27;default&#x27;].cancel(this.animationID);
+    _raf2['default'].cancel(this.animationID);
     this.animationID = null;
   }
 }</pre></li>
@@ -3904,8 +3897,8 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
   var defaultStyle = _props.defaultStyle;
   var style = _props.style;
 
-  var currentStyle = defaultStyle || _stripStyle2[&#x27;default&#x27;](style);
-  var currentVelocity = _mapToZero2[&#x27;default&#x27;](currentStyle);
+  var currentStyle = defaultStyle || _stripStyle2['default'](style);
+  var currentVelocity = _mapToZero2['default'](currentStyle);
   return {
     currentStyle: currentStyle,
     currentVelocity: currentVelocity,
@@ -3936,7 +3929,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function render() {
   var renderedChildren = this.props.children(this.state.currentStyle);
-  return renderedChildren &#x26;&#x26; _react2[&#x27;default&#x27;].Children.only(renderedChildren);
+  return renderedChildren &amp;&amp; _react2['default'].Children.only(renderedChildren);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3962,15 +3955,15 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
 
   // TODO: when config is {a: 10} and dest is {a: 10} do we raf once and
   // call cb? No, otherwise accidental parent rerender causes cb trigger
-  this.animationID = _raf2[&#x27;default&#x27;](function (timestamp) {
+  this.animationID = _raf2['default'](function (timestamp) {
     // check if we need to animate in the first place
     var propsStyle = _this.props.style;
-    if (_shouldStopAnimation2[&#x27;default&#x27;](_this.state.currentStyle, propsStyle, _this.state.currentVelocity)) {
-      if (_this.wasAnimating &#x26;&#x26; _this.props.onRest) {
+    if (_shouldStopAnimation2['default'](_this.state.currentStyle, propsStyle, _this.state.currentVelocity)) {
+      if (_this.wasAnimating &amp;&amp; _this.props.onRest) {
         _this.props.onRest();
       }
 
-      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      // no need to cancel animationID here; shouldn't have any in flight
       _this.animationID = null;
       _this.wasAnimating = false;
       _this.accumulatedTime = 0;
@@ -3979,17 +3972,17 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
 
     _this.wasAnimating = true;
 
-    var currentTime = timestamp || _performanceNow2[&#x27;default&#x27;]();
+    var currentTime = timestamp || _performanceNow2['default']();
     var timeDelta = currentTime - _this.prevTime;
     _this.prevTime = currentTime;
     _this.accumulatedTime = _this.accumulatedTime + timeDelta;
     // more than 10 frames? prolly switched browser tab. Restart
-    if (_this.accumulatedTime &#x3e; msPerFrame * 10) {
+    if (_this.accumulatedTime &gt; msPerFrame * 10) {
       _this.accumulatedTime = 0;
     }
 
     if (_this.accumulatedTime === 0) {
-      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      // no need to cancel animationID here; shouldn't have any in flight
       _this.animationID = null;
       _this.startAnimationIfNecessary();
       return;
@@ -4010,7 +4003,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
       }
 
       var styleValue = propsStyle[key];
-      if (typeof styleValue === &#x27;number&#x27;) {
+      if (typeof styleValue === 'number') {
         newCurrentStyle[key] = styleValue;
         newCurrentVelocity[key] = 0;
         newLastIdealStyle[key] = styleValue;
@@ -4018,15 +4011,15 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
       } else {
         var newLastIdealStyleValue = _this.state.lastIdealStyle[key];
         var newLastIdealVelocityValue = _this.state.lastIdealVelocity[key];
-        for (var i = 0; i &#x3c; framesToCatchUp; i++) {
-          var _stepper = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.val
+        for (var i = 0; i &lt; framesToCatchUp; i++) {
+          var _stepper = _stepper4['default'](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.val
 , styleValue.stiffness, styleValue.damping, styleValue.precision);
 
           newLastIdealStyleValue = _stepper[0];
           newLastIdealVelocityValue = _stepper[1];
         }
 
-        var _stepper2 = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.val
+        var _stepper2 = _stepper4['default'](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.val
 , styleValue.stiffness, styleValue.damping, styleValue.precision);
 
         var nextIdealX = _stepper2[0];
@@ -4040,7 +4033,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     }
 
     _this.animationID = null;
-    // the amount we&#x27;re looped over above
+    // the amount we're looped over above
     _this.accumulatedTime -= framesToCatchUp * msPerFrame;
 
     _this.setState({
@@ -4076,9 +4069,9 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
   // This constructor gets overridden by mocks. The argument is used
   // by mocks to assert on what gets mounted.
 
-  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
-    process.env.NODE_ENV !== &#x27;production&#x27; ? warning(this instanceof Constructor, &#x27;Something is calling a React component directly
-. Use a factory or &#x27; + &#x27;JSX instead. See: https://fb.me/react-legacyfactory&#x27;) : void 0;
+  if (process.env.NODE_ENV !== 'production') {
+    process.env.NODE_ENV !== 'production' ? warning(this instanceof Constructor, 'Something is calling a React component directly
+. Use a factory or ' + 'JSX instead. See: https://fb.me/react-legacyfactory') : void 0;
   }
 
   // Wire up auto-binding
@@ -4093,21 +4086,21 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
 
   this.state = null;
 
-  // ReactClasses doesn&#x27;t have constructors. Instead, they use the
+  // ReactClasses doesn't have constructors. Instead, they use the
   // getInitialState and componentWillMount methods for initialization.
 
   var initialState = this.getInitialState ? this.getInitialState() : null;
-  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
-    // We allow auto-mocks to proceed as if they&#x27;re returning null.
-    if (initialState === undefined &#x26;&#x26; this.getInitialState._isMockFunction) {
+  if (process.env.NODE_ENV !== 'production') {
+    // We allow auto-mocks to proceed as if they're returning null.
+    if (initialState === undefined &amp;&amp; this.getInitialState._isMockFunction) {
       // This is probably bad practice. Consider warning here and
       // deprecating this convenience.
       initialState = null;
     }
   }
-  !(typeof initialState === &#x27;object&#x27; &#x26;&#x26; !Array.isArray(initialState)) ? process.env.NODE_ENV !== &#x27;production&#x27; ? invariant(false, &#x27;%
-s.getInitialState(): must return an object or null&#x27;, Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : _prodInvariant(&#x27;82&#x27;,
-Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
+  !(typeof initialState === 'object' &amp;&amp; !Array.isArray(initialState)) ? process.env.NODE_ENV !== 'production' ? invariant(false, '%
+s.getInitialState(): must return an object or null', Constructor.displayName || 'ReactCompositeComponent') : _prodInvariant('82',
+Constructor.displayName || 'ReactCompositeComponent') : void 0;
 
   this.state = initialState;
 }</pre></li>
@@ -4184,7 +4177,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
   var lastIdealVelocities = _state.lastIdealVelocities;
 
   var someDirty = false;
-  for (var i = 0; i &#x3c; unreadPropStyles.length; i++) {
+  for (var i = 0; i &lt; unreadPropStyles.length; i++) {
     var unreadPropStyle = unreadPropStyles[i];
     var dirty = false;
 
@@ -4194,7 +4187,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
       }
 
       var styleValue = unreadPropStyle[key];
-      if (typeof styleValue === &#x27;number&#x27;) {
+      if (typeof styleValue === 'number') {
         if (!dirty) {
           dirty = true;
           someDirty = true;
@@ -4229,7 +4222,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function componentDidMount() {
-  this.prevTime = _performanceNow2[&#x27;default&#x27;]();
+  this.prevTime = _performanceNow2['default']();
   this.startAnimationIfNecessary();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -4246,13 +4239,13 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function componentWillReceiveProps(props) {
   if (this.unreadPropStyles != null) {
-    // previous props haven&#x27;t had the chance to be set yet; set them here
+    // previous props haven't had the chance to be set yet; set them here
     this.clearUnreadPropStyle(this.unreadPropStyles);
   }
 
   this.unreadPropStyles = props.styles(this.state.lastIdealStyles);
   if (this.animationID == null) {
-    this.prevTime = _performanceNow2[&#x27;default&#x27;]();
+    this.prevTime = _performanceNow2['default']();
     this.startAnimationIfNecessary();
   }
 }</pre></li>
@@ -4270,7 +4263,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function componentWillUnmount() {
   if (this.animationID != null) {
-    _raf2[&#x27;default&#x27;].cancel(this.animationID);
+    _raf2['default'].cancel(this.animationID);
     this.animationID = null;
   }
 }</pre></li>
@@ -4290,9 +4283,9 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
   // This constructor gets overridden by mocks. The argument is used
   // by mocks to assert on what gets mounted.
 
-  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
-    process.env.NODE_ENV !== &#x27;production&#x27; ? warning(this instanceof Constructor, &#x27;Something is calling a React component directly
-. Use a factory or &#x27; + &#x27;JSX instead. See: https://fb.me/react-legacyfactory&#x27;) : void 0;
+  if (process.env.NODE_ENV !== 'production') {
+    process.env.NODE_ENV !== 'production' ? warning(this instanceof Constructor, 'Something is calling a React component directly
+. Use a factory or ' + 'JSX instead. See: https://fb.me/react-legacyfactory') : void 0;
   }
 
   // Wire up auto-binding
@@ -4307,21 +4300,21 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
 
   this.state = null;
 
-  // ReactClasses doesn&#x27;t have constructors. Instead, they use the
+  // ReactClasses doesn't have constructors. Instead, they use the
   // getInitialState and componentWillMount methods for initialization.
 
   var initialState = this.getInitialState ? this.getInitialState() : null;
-  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
-    // We allow auto-mocks to proceed as if they&#x27;re returning null.
-    if (initialState === undefined &#x26;&#x26; this.getInitialState._isMockFunction) {
+  if (process.env.NODE_ENV !== 'production') {
+    // We allow auto-mocks to proceed as if they're returning null.
+    if (initialState === undefined &amp;&amp; this.getInitialState._isMockFunction) {
       // This is probably bad practice. Consider warning here and
       // deprecating this convenience.
       initialState = null;
     }
   }
-  !(typeof initialState === &#x27;object&#x27; &#x26;&#x26; !Array.isArray(initialState)) ? process.env.NODE_ENV !== &#x27;production&#x27; ? invariant(false, &#x27;%
-s.getInitialState(): must return an object or null&#x27;, Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : _prodInvariant(&#x27;82&#x27;,
-Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
+  !(typeof initialState === 'object' &amp;&amp; !Array.isArray(initialState)) ? process.env.NODE_ENV !== 'production' ? invariant(false, '%
+s.getInitialState(): must return an object or null', Constructor.displayName || 'ReactCompositeComponent') : _prodInvariant('82',
+Constructor.displayName || 'ReactCompositeComponent') : void 0;
 
   this.state = initialState;
 }</pre></li>
@@ -4342,9 +4335,9 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
   var defaultStyles = _props.defaultStyles;
   var styles = _props.styles;
 
-  var currentStyles = defaultStyles || styles().map(_stripStyle2[&#x27;default&#x27;]);
+  var currentStyles = defaultStyles || styles().map(_stripStyle2['default']);
   var currentVelocities = currentStyles.map(function (currentStyle) {
-    return _mapToZero2[&#x27;default&#x27;](currentStyle);
+    return _mapToZero2['default'](currentStyle);
   });
   return {
     currentStyles: currentStyles,
@@ -4367,7 +4360,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function render() {
   var renderedChildren = this.props.children(this.state.currentStyles);
-  return renderedChildren &#x26;&#x26; _react2[&#x27;default&#x27;].Children.only(renderedChildren);
+  return renderedChildren &amp;&amp; _react2['default'].Children.only(renderedChildren);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -4386,28 +4379,28 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
 
   // TODO: when config is {a: 10} and dest is {a: 10} do we raf once and
   // call cb? No, otherwise accidental parent rerender causes cb trigger
-  this.animationID = _raf2[&#x27;default&#x27;](function (timestamp) {
+  this.animationID = _raf2['default'](function (timestamp) {
     var destStyles = _this.props.styles(_this.state.lastIdealStyles);
 
     // check if we need to animate in the first place
     if (shouldStopAnimationAll(_this.state.currentStyles, destStyles, _this.state.currentVelocities)) {
-      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      // no need to cancel animationID here; shouldn't have any in flight
       _this.animationID = null;
       _this.accumulatedTime = 0;
       return;
     }
 
-    var currentTime = timestamp || _performanceNow2[&#x27;default&#x27;]();
+    var currentTime = timestamp || _performanceNow2['default']();
     var timeDelta = currentTime - _this.prevTime;
     _this.prevTime = currentTime;
     _this.accumulatedTime = _this.accumulatedTime + timeDelta;
     // more than 10 frames? prolly switched browser tab. Restart
-    if (_this.accumulatedTime &#x3e; msPerFrame * 10) {
+    if (_this.accumulatedTime &gt; msPerFrame * 10) {
       _this.accumulatedTime = 0;
     }
 
     if (_this.accumulatedTime === 0) {
-      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      // no need to cancel animationID here; shouldn't have any in flight
       _this.animationID = null;
       _this.startAnimationIfNecessary();
       return;
@@ -4422,7 +4415,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     var newCurrentStyles = [];
     var newCurrentVelocities = [];
 
-    for (var i = 0; i &#x3c; destStyles.length; i++) {
+    for (var i = 0; i &lt; destStyles.length; i++) {
       var destStyle = destStyles[i];
       var newCurrentStyle = {};
       var newCurrentVelocity = {};
@@ -4435,7 +4428,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
         }
 
         var styleValue = destStyle[key];
-        if (typeof styleValue === &#x27;number&#x27;) {
+        if (typeof styleValue === 'number') {
           newCurrentStyle[key] = styleValue;
           newCurrentVelocity[key] = 0;
           newLastIdealStyle[key] = styleValue;
@@ -4443,15 +4436,15 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
         } else {
           var newLastIdealStyleValue = _this.state.lastIdealStyles[i][key];
           var newLastIdealVelocityValue = _this.state.lastIdealVelocities[i][key];
-          for (var j = 0; j &#x3c; framesToCatchUp; j++) {
-            var _stepper = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue
+          for (var j = 0; j &lt; framesToCatchUp; j++) {
+            var _stepper = _stepper4['default'](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue
 .val, styleValue.stiffness, styleValue.damping, styleValue.precision);
 
             newLastIdealStyleValue = _stepper[0];
             newLastIdealVelocityValue = _stepper[1];
           }
 
-          var _stepper2 = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.
+          var _stepper2 = _stepper4['default'](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.
 val, styleValue.stiffness, styleValue.damping, styleValue.precision);
 
           var nextIdealX = _stepper2[0];
@@ -4472,7 +4465,7 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
     }
 
     _this.animationID = null;
-    // the amount we&#x27;re looped over above
+    // the amount we're looped over above
     _this.accumulatedTime -= framesToCatchUp * msPerFrame;
 
     _this.setState({
@@ -4546,7 +4539,7 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
   var lastIdealVelocities = _state.lastIdealVelocities;
 
   var someDirty = false;
-  for (var i = 0; i &#x3c; unreadPropStyles.length; i++) {
+  for (var i = 0; i &lt; unreadPropStyles.length; i++) {
     var unreadPropStyle = unreadPropStyles[i];
     var dirty = false;
 
@@ -4556,7 +4549,7 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
       }
 
       var styleValue = unreadPropStyle[key];
-      if (typeof styleValue === &#x27;number&#x27;) {
+      if (typeof styleValue === 'number') {
         if (!dirty) {
           dirty = true;
           someDirty = true;
@@ -4595,28 +4588,28 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
 
   // TODO: when config is {a: 10} and dest is {a: 10} do we raf once and
   // call cb? No, otherwise accidental parent rerender causes cb trigger
-  this.animationID = _raf2[&#x27;default&#x27;](function (timestamp) {
+  this.animationID = _raf2['default'](function (timestamp) {
     var destStyles = _this.props.styles(_this.state.lastIdealStyles);
 
     // check if we need to animate in the first place
     if (shouldStopAnimationAll(_this.state.currentStyles, destStyles, _this.state.currentVelocities)) {
-      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      // no need to cancel animationID here; shouldn't have any in flight
       _this.animationID = null;
       _this.accumulatedTime = 0;
       return;
     }
 
-    var currentTime = timestamp || _performanceNow2[&#x27;default&#x27;]();
+    var currentTime = timestamp || _performanceNow2['default']();
     var timeDelta = currentTime - _this.prevTime;
     _this.prevTime = currentTime;
     _this.accumulatedTime = _this.accumulatedTime + timeDelta;
     // more than 10 frames? prolly switched browser tab. Restart
-    if (_this.accumulatedTime &#x3e; msPerFrame * 10) {
+    if (_this.accumulatedTime &gt; msPerFrame * 10) {
       _this.accumulatedTime = 0;
     }
 
     if (_this.accumulatedTime === 0) {
-      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      // no need to cancel animationID here; shouldn't have any in flight
       _this.animationID = null;
       _this.startAnimationIfNecessary();
       return;
@@ -4631,7 +4624,7 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
     var newCurrentStyles = [];
     var newCurrentVelocities = [];
 
-    for (var i = 0; i &#x3c; destStyles.length; i++) {
+    for (var i = 0; i &lt; destStyles.length; i++) {
       var destStyle = destStyles[i];
       var newCurrentStyle = {};
       var newCurrentVelocity = {};
@@ -4644,7 +4637,7 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
         }
 
         var styleValue = destStyle[key];
-        if (typeof styleValue === &#x27;number&#x27;) {
+        if (typeof styleValue === 'number') {
           newCurrentStyle[key] = styleValue;
           newCurrentVelocity[key] = 0;
           newLastIdealStyle[key] = styleValue;
@@ -4652,15 +4645,15 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
         } else {
           var newLastIdealStyleValue = _this.state.lastIdealStyles[i][key];
           var newLastIdealVelocityValue = _this.state.lastIdealVelocities[i][key];
-          for (var j = 0; j &#x3c; framesToCatchUp; j++) {
-            var _stepper = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue
+          for (var j = 0; j &lt; framesToCatchUp; j++) {
+            var _stepper = _stepper4['default'](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue
 .val, styleValue.stiffness, styleValue.damping, styleValue.precision);
 
             newLastIdealStyleValue = _stepper[0];
             newLastIdealVelocityValue = _stepper[1];
           }
 
-          var _stepper2 = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.
+          var _stepper2 = _stepper4['default'](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.
 val, styleValue.stiffness, styleValue.damping, styleValue.precision);
 
           var nextIdealX = _stepper2[0];
@@ -4681,7 +4674,7 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
     }
 
     _this.animationID = null;
-    // the amount we&#x27;re looped over above
+    // the amount we're looped over above
     _this.accumulatedTime -= framesToCatchUp * msPerFrame;
 
     _this.setState({
@@ -4725,7 +4718,7 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
   var lastIdealVelocities = _state.lastIdealVelocities;
 
   var someDirty = false;
-  for (var i = 0; i &#x3c; unreadPropStyles.length; i++) {
+  for (var i = 0; i &lt; unreadPropStyles.length; i++) {
     var unreadPropStyle = unreadPropStyles[i];
     var dirty = false;
 
@@ -4735,7 +4728,7 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
       }
 
       var styleValue = unreadPropStyle[key];
-      if (typeof styleValue === &#x27;number&#x27;) {
+      if (typeof styleValue === 'number') {
         if (!dirty) {
           dirty = true;
           someDirty = true;
@@ -4775,7 +4768,7 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function componentDidMount() {
-  this.prevTime = _performanceNow2[&#x27;default&#x27;]();
+  this.prevTime = _performanceNow2['default']();
   this.startAnimationIfNecessary();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -4799,13 +4792,13 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function componentWillReceiveProps(props) {
   if (this.unreadPropStyles != null) {
-    // previous props haven&#x27;t had the chance to be set yet; set them here
+    // previous props haven't had the chance to be set yet; set them here
     this.clearUnreadPropStyle(this.unreadPropStyles);
   }
 
   this.unreadPropStyles = props.styles(this.state.lastIdealStyles);
   if (this.animationID == null) {
-    this.prevTime = _performanceNow2[&#x27;default&#x27;]();
+    this.prevTime = _performanceNow2['default']();
     this.startAnimationIfNecessary();
   }
 }</pre></li>
@@ -4830,7 +4823,7 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function componentWillUnmount() {
   if (this.animationID != null) {
-    _raf2[&#x27;default&#x27;].cancel(this.animationID);
+    _raf2['default'].cancel(this.animationID);
     this.animationID = null;
   }
 }</pre></li>
@@ -4858,9 +4851,9 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
   var defaultStyles = _props.defaultStyles;
   var styles = _props.styles;
 
-  var currentStyles = defaultStyles || styles().map(_stripStyle2[&#x27;default&#x27;]);
+  var currentStyles = defaultStyles || styles().map(_stripStyle2['default']);
   var currentVelocities = currentStyles.map(function (currentStyle) {
-    return _mapToZero2[&#x27;default&#x27;](currentStyle);
+    return _mapToZero2['default'](currentStyle);
   });
   return {
     currentStyles: currentStyles,
@@ -4892,7 +4885,7 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function render() {
   var renderedChildren = this.props.children(this.state.currentStyles);
-  return renderedChildren &#x26;&#x26; _react2[&#x27;default&#x27;].Children.only(renderedChildren);
+  return renderedChildren &amp;&amp; _react2['default'].Children.only(renderedChildren);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -4918,28 +4911,28 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
 
   // TODO: when config is {a: 10} and dest is {a: 10} do we raf once and
   // call cb? No, otherwise accidental parent rerender causes cb trigger
-  this.animationID = _raf2[&#x27;default&#x27;](function (timestamp) {
+  this.animationID = _raf2['default'](function (timestamp) {
     var destStyles = _this.props.styles(_this.state.lastIdealStyles);
 
     // check if we need to animate in the first place
     if (shouldStopAnimationAll(_this.state.currentStyles, destStyles, _this.state.currentVelocities)) {
-      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      // no need to cancel animationID here; shouldn't have any in flight
       _this.animationID = null;
       _this.accumulatedTime = 0;
       return;
     }
 
-    var currentTime = timestamp || _performanceNow2[&#x27;default&#x27;]();
+    var currentTime = timestamp || _performanceNow2['default']();
     var timeDelta = currentTime - _this.prevTime;
     _this.prevTime = currentTime;
     _this.accumulatedTime = _this.accumulatedTime + timeDelta;
     // more than 10 frames? prolly switched browser tab. Restart
-    if (_this.accumulatedTime &#x3e; msPerFrame * 10) {
+    if (_this.accumulatedTime &gt; msPerFrame * 10) {
       _this.accumulatedTime = 0;
     }
 
     if (_this.accumulatedTime === 0) {
-      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      // no need to cancel animationID here; shouldn't have any in flight
       _this.animationID = null;
       _this.startAnimationIfNecessary();
       return;
@@ -4954,7 +4947,7 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
     var newCurrentStyles = [];
     var newCurrentVelocities = [];
 
-    for (var i = 0; i &#x3c; destStyles.length; i++) {
+    for (var i = 0; i &lt; destStyles.length; i++) {
       var destStyle = destStyles[i];
       var newCurrentStyle = {};
       var newCurrentVelocity = {};
@@ -4967,7 +4960,7 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
         }
 
         var styleValue = destStyle[key];
-        if (typeof styleValue === &#x27;number&#x27;) {
+        if (typeof styleValue === 'number') {
           newCurrentStyle[key] = styleValue;
           newCurrentVelocity[key] = 0;
           newLastIdealStyle[key] = styleValue;
@@ -4975,15 +4968,15 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
         } else {
           var newLastIdealStyleValue = _this.state.lastIdealStyles[i][key];
           var newLastIdealVelocityValue = _this.state.lastIdealVelocities[i][key];
-          for (var j = 0; j &#x3c; framesToCatchUp; j++) {
-            var _stepper = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue
+          for (var j = 0; j &lt; framesToCatchUp; j++) {
+            var _stepper = _stepper4['default'](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue
 .val, styleValue.stiffness, styleValue.damping, styleValue.precision);
 
             newLastIdealStyleValue = _stepper[0];
             newLastIdealVelocityValue = _stepper[1];
           }
 
-          var _stepper2 = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.
+          var _stepper2 = _stepper4['default'](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.
 val, styleValue.stiffness, styleValue.damping, styleValue.precision);
 
           var nextIdealX = _stepper2[0];
@@ -5004,7 +4997,7 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
     }
 
     _this.animationID = null;
-    // the amount we&#x27;re looped over above
+    // the amount we're looped over above
     _this.accumulatedTime -= framesToCatchUp * msPerFrame;
 
     _this.setState({
@@ -5040,9 +5033,9 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
   // This constructor gets overridden by mocks. The argument is used
   // by mocks to assert on what gets mounted.
 
-  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
-    process.env.NODE_ENV !== &#x27;production&#x27; ? warning(this instanceof Constructor, &#x27;Something is calling a React component directly
-. Use a factory or &#x27; + &#x27;JSX instead. See: https://fb.me/react-legacyfactory&#x27;) : void 0;
+  if (process.env.NODE_ENV !== 'production') {
+    process.env.NODE_ENV !== 'production' ? warning(this instanceof Constructor, 'Something is calling a React component directly
+. Use a factory or ' + 'JSX instead. See: https://fb.me/react-legacyfactory') : void 0;
   }
 
   // Wire up auto-binding
@@ -5057,21 +5050,21 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
 
   this.state = null;
 
-  // ReactClasses doesn&#x27;t have constructors. Instead, they use the
+  // ReactClasses doesn't have constructors. Instead, they use the
   // getInitialState and componentWillMount methods for initialization.
 
   var initialState = this.getInitialState ? this.getInitialState() : null;
-  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
-    // We allow auto-mocks to proceed as if they&#x27;re returning null.
-    if (initialState === undefined &#x26;&#x26; this.getInitialState._isMockFunction) {
+  if (process.env.NODE_ENV !== 'production') {
+    // We allow auto-mocks to proceed as if they're returning null.
+    if (initialState === undefined &amp;&amp; this.getInitialState._isMockFunction) {
       // This is probably bad practice. Consider warning here and
       // deprecating this convenience.
       initialState = null;
     }
   }
-  !(typeof initialState === &#x27;object&#x27; &#x26;&#x26; !Array.isArray(initialState)) ? process.env.NODE_ENV !== &#x27;production&#x27; ? invariant(false, &#x27;%
-s.getInitialState(): must return an object or null&#x27;, Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : _prodInvariant(&#x27;82&#x27;,
-Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
+  !(typeof initialState === 'object' &amp;&amp; !Array.isArray(initialState)) ? process.env.NODE_ENV !== 'production' ? invariant(false, '%
+s.getInitialState(): must return an object or null', Constructor.displayName || 'ReactCompositeComponent') : _prodInvariant('82',
+Constructor.displayName || 'ReactCompositeComponent') : void 0;
 
   this.state = initialState;
 }</pre></li>
@@ -5090,7 +5083,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     <li>description and source-code<pre class="apidocCodePre">function getDefaultProps() {
   return {
     willEnter: function willEnter(styleThatEntered) {
-      return _stripStyle2[&#x27;default&#x27;](styleThatEntered.style);
+      return _stripStyle2['default'](styleThatEntered.style);
     },
     // recall: returning null makes the current unmounting TransitionStyle
     // disappear immediately
@@ -5137,7 +5130,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function willEnter(styleThatEntered) {
-  return _stripStyle2[&#x27;default&#x27;](styleThatEntered.style);
+  return _stripStyle2['default'](styleThatEntered.style);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5174,7 +5167,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     <li>description and source-code<pre class="apidocCodePre">function getDefaultProps() {
   return {
     willEnter: function willEnter(styleThatEntered) {
-      return _stripStyle2[&#x27;default&#x27;](styleThatEntered.style);
+      return _stripStyle2['default'](styleThatEntered.style);
     },
     // recall: returning null makes the current unmounting TransitionStyle
     // disappear immediately
@@ -5299,7 +5292,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
   var lastIdealStyles = _mergeAndSync2[3];
   var lastIdealVelocities = _mergeAndSync2[4];
 
-  for (var i = 0; i &#x3c; unreadPropStyles.length; i++) {
+  for (var i = 0; i &lt; unreadPropStyles.length; i++) {
     var unreadPropStyle = unreadPropStyles[i].style;
     var dirty = false;
 
@@ -5309,7 +5302,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
       }
 
       var styleValue = unreadPropStyle[key];
-      if (typeof styleValue === &#x27;number&#x27;) {
+      if (typeof styleValue === 'number') {
         if (!dirty) {
           dirty = true;
           currentStyles[i] = _extends({}, currentStyles[i]);
@@ -5331,9 +5324,9 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     }
   }
 
-  // unlike the other 2 components, we can&#x27;t detect staleness and optionally
-  // opt out of setState here. each style object&#x27;s data might contain new
-  // stuff we&#x27;re not/cannot compare
+  // unlike the other 2 components, we can't detect staleness and optionally
+  // opt out of setState here. each style object's data might contain new
+  // stuff we're not/cannot compare
   this.setState({
     currentStyles: currentStyles,
     currentVelocities: currentVelocities,
@@ -5355,7 +5348,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function componentDidMount() {
-  this.prevTime = _performanceNow2[&#x27;default&#x27;]();
+  this.prevTime = _performanceNow2['default']();
   this.startAnimationIfNecessary();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -5372,12 +5365,12 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function componentWillReceiveProps(props) {
   if (this.unreadPropStyles) {
-    // previous props haven&#x27;t had the chance to be set yet; set them here
+    // previous props haven't had the chance to be set yet; set them here
     this.clearUnreadPropStyle(this.unreadPropStyles);
   }
 
   var styles = props.styles;
-  if (typeof styles === &#x27;function&#x27;) {
+  if (typeof styles === 'function') {
     this.unreadPropStyles = styles(rehydrateStyles(this.state.mergedPropsStyles, this.unreadPropStyles, this.state.lastIdealStyles
 ));
   } else {
@@ -5385,7 +5378,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
   }
 
   if (this.animationID == null) {
-    this.prevTime = _performanceNow2[&#x27;default&#x27;]();
+    this.prevTime = _performanceNow2['default']();
     this.startAnimationIfNecessary();
   }
 }</pre></li>
@@ -5404,7 +5397,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     <li>description and source-code<pre class="apidocCodePre">function componentWillUnmount() {
   this.unmounting = true;
   if (this.animationID != null) {
-    _raf2[&#x27;default&#x27;].cancel(this.animationID);
+    _raf2['default'].cancel(this.animationID);
     this.animationID = null;
   }
 }</pre></li>
@@ -5424,9 +5417,9 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
   // This constructor gets overridden by mocks. The argument is used
   // by mocks to assert on what gets mounted.
 
-  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
-    process.env.NODE_ENV !== &#x27;production&#x27; ? warning(this instanceof Constructor, &#x27;Something is calling a React component directly
-. Use a factory or &#x27; + &#x27;JSX instead. See: https://fb.me/react-legacyfactory&#x27;) : void 0;
+  if (process.env.NODE_ENV !== 'production') {
+    process.env.NODE_ENV !== 'production' ? warning(this instanceof Constructor, 'Something is calling a React component directly
+. Use a factory or ' + 'JSX instead. See: https://fb.me/react-legacyfactory') : void 0;
   }
 
   // Wire up auto-binding
@@ -5441,21 +5434,21 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
 
   this.state = null;
 
-  // ReactClasses doesn&#x27;t have constructors. Instead, they use the
+  // ReactClasses doesn't have constructors. Instead, they use the
   // getInitialState and componentWillMount methods for initialization.
 
   var initialState = this.getInitialState ? this.getInitialState() : null;
-  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
-    // We allow auto-mocks to proceed as if they&#x27;re returning null.
-    if (initialState === undefined &#x26;&#x26; this.getInitialState._isMockFunction) {
+  if (process.env.NODE_ENV !== 'production') {
+    // We allow auto-mocks to proceed as if they're returning null.
+    if (initialState === undefined &amp;&amp; this.getInitialState._isMockFunction) {
       // This is probably bad practice. Consider warning here and
       // deprecating this convenience.
       initialState = null;
     }
   }
-  !(typeof initialState === &#x27;object&#x27; &#x26;&#x26; !Array.isArray(initialState)) ? process.env.NODE_ENV !== &#x27;production&#x27; ? invariant(false, &#x27;%
-s.getInitialState(): must return an object or null&#x27;, Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : _prodInvariant(&#x27;82&#x27;,
-Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
+  !(typeof initialState === 'object' &amp;&amp; !Array.isArray(initialState)) ? process.env.NODE_ENV !== 'production' ? invariant(false, '%
+s.getInitialState(): must return an object or null', Constructor.displayName || 'ReactCompositeComponent') : _prodInvariant('82',
+Constructor.displayName || 'ReactCompositeComponent') : void 0;
 
   this.state = initialState;
 }</pre></li>
@@ -5479,11 +5472,11 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
   var willLeave = _props.willLeave;
   var didLeave = _props.didLeave;
 
-  var destStyles = typeof styles === &#x27;function&#x27; ? styles(defaultStyles) : styles;
+  var destStyles = typeof styles === 'function' ? styles(defaultStyles) : styles;
 
-  // this is special. for the first time around, we don&#x27;t have a comparison
-  // between last (no last) and current merged props. we&#x27;ll compute last so:
-  // say default is {a, b} and styles (dest style) is {b, c}, we&#x27;ll
+  // this is special. for the first time around, we don't have a comparison
+  // between last (no last) and current merged props. we'll compute last so:
+  // say default is {a, b} and styles (dest style) is {b, c}, we'll
   // fabricate last as {a, b}
   var oldMergedPropsStyles = undefined;
   if (defaultStyles == null) {
@@ -5491,7 +5484,7 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
   } else {
     oldMergedPropsStyles = defaultStyles.map(function (defaultStyleCell) {
       // TODO: key search code
-      for (var i = 0; i &#x3c; destStyles.length; i++) {
+      for (var i = 0; i &lt; destStyles.length; i++) {
         if (destStyles[i].key === defaultStyleCell.key) {
           return destStyles[i];
         }
@@ -5500,18 +5493,18 @@ Constructor.displayName || &#x27;ReactCompositeComponent&#x27;) : void 0;
     });
   }
   var oldCurrentStyles = defaultStyles == null ? destStyles.map(function (s) {
-    return _stripStyle2[&#x27;default&#x27;](s.style);
+    return _stripStyle2['default'](s.style);
   }) : defaultStyles.map(function (s) {
-    return _stripStyle2[&#x27;default&#x27;](s.style);
+    return _stripStyle2['default'](s.style);
   });
   var oldCurrentVelocities = defaultStyles == null ? destStyles.map(function (s) {
-    return _mapToZero2[&#x27;default&#x27;](s.style);
+    return _mapToZero2['default'](s.style);
   }) : defaultStyles.map(function (s) {
-    return _mapToZero2[&#x27;default&#x27;](s.style);
+    return _mapToZero2['default'](s.style);
   });
 
   var _mergeAndSync = mergeAndSync(
-  // Because this is an old-style React.createClass component, Flow doesn&#x27;t
+  // Because this is an old-style React.createClass component, Flow doesn't
   // understand that the willEnter and willLeave props have default values
   // and will always be present.
   willEnter, willLeave, didLeave, oldMergedPropsStyles, destStyles, oldCurrentStyles, oldCurrentVelocities, oldCurrentStyles, //
@@ -5548,7 +5541,7 @@ oldLastIdealStyles really
     <li>description and source-code<pre class="apidocCodePre">function render() {
   var hydratedStyles = rehydrateStyles(this.state.mergedPropsStyles, this.unreadPropStyles, this.state.currentStyles);
   var renderedChildren = this.props.children(hydratedStyles);
-  return renderedChildren &#x26;&#x26; _react2[&#x27;default&#x27;].Children.only(renderedChildren);
+  return renderedChildren &amp;&amp; _react2['default'].Children.only(renderedChildren);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5570,31 +5563,31 @@ oldLastIdealStyles really
   }
   // TODO: when config is {a: 10} and dest is {a: 10} do we raf once and
   // call cb? No, otherwise accidental parent rerender causes cb trigger
-  this.animationID = _raf2[&#x27;default&#x27;](function (timestamp) {
+  this.animationID = _raf2['default'](function (timestamp) {
     var propStyles = _this.props.styles;
-    var destStyles = typeof propStyles === &#x27;function&#x27; ? propStyles(rehydrateStyles(_this.state.mergedPropsStyles, _this.unreadPropStyles
+    var destStyles = typeof propStyles === 'function' ? propStyles(rehydrateStyles(_this.state.mergedPropsStyles, _this.unreadPropStyles
 , _this.state.lastIdealStyles)) : propStyles;
 
     // check if we need to animate in the first place
     if (shouldStopAnimationAll(_this.state.currentStyles, destStyles, _this.state.currentVelocities, _this.state.mergedPropsStyles
 )) {
-      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      // no need to cancel animationID here; shouldn't have any in flight
       _this.animationID = null;
       _this.accumulatedTime = 0;
       return;
     }
 
-    var currentTime = timestamp || _performanceNow2[&#x27;default&#x27;]();
+    var currentTime = timestamp || _performanceNow2['default']();
     var timeDelta = currentTime - _this.prevTime;
     _this.prevTime = currentTime;
     _this.accumulatedTime = _this.accumulatedTime + timeDelta;
     // more than 10 frames? prolly switched browser tab. Restart
-    if (_this.accumulatedTime &#x3e; msPerFrame * 10) {
+    if (_this.accumulatedTime &gt; msPerFrame * 10) {
       _this.accumulatedTime = 0;
     }
 
     if (_this.accumulatedTime === 0) {
-      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      // no need to cancel animationID here; shouldn't have any in flight
       _this.animationID = null;
       _this.startAnimationIfNecessary();
       return;
@@ -5614,7 +5607,7 @@ oldLastIdealStyles really
     var newLastIdealStyles = _mergeAndSync3[3];
     var newLastIdealVelocities = _mergeAndSync3[4];
 
-    for (var i = 0; i &#x3c; newMergedPropsStyles.length; i++) {
+    for (var i = 0; i &lt; newMergedPropsStyles.length; i++) {
       var newMergedPropsStyle = newMergedPropsStyles[i].style;
       var newCurrentStyle = {};
       var newCurrentVelocity = {};
@@ -5627,7 +5620,7 @@ oldLastIdealStyles really
         }
 
         var styleValue = newMergedPropsStyle[key];
-        if (typeof styleValue === &#x27;number&#x27;) {
+        if (typeof styleValue === 'number') {
           newCurrentStyle[key] = styleValue;
           newCurrentVelocity[key] = 0;
           newLastIdealStyle[key] = styleValue;
@@ -5635,15 +5628,15 @@ oldLastIdealStyles really
         } else {
           var newLastIdealStyleValue = newLastIdealStyles[i][key];
           var newLastIdealVelocityValue = newLastIdealVelocities[i][key];
-          for (var j = 0; j &#x3c; framesToCatchUp; j++) {
-            var _stepper = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue
+          for (var j = 0; j &lt; framesToCatchUp; j++) {
+            var _stepper = _stepper4['default'](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue
 .val, styleValue.stiffness, styleValue.damping, styleValue.precision);
 
             newLastIdealStyleValue = _stepper[0];
             newLastIdealVelocityValue = _stepper[1];
           }
 
-          var _stepper2 = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.
+          var _stepper2 = _stepper4['default'](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.
 val, styleValue.stiffness, styleValue.damping, styleValue.precision);
 
           var nextIdealX = _stepper2[0];
@@ -5720,7 +5713,7 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
   var lastIdealStyles = _mergeAndSync2[3];
   var lastIdealVelocities = _mergeAndSync2[4];
 
-  for (var i = 0; i &#x3c; unreadPropStyles.length; i++) {
+  for (var i = 0; i &lt; unreadPropStyles.length; i++) {
     var unreadPropStyle = unreadPropStyles[i].style;
     var dirty = false;
 
@@ -5730,7 +5723,7 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
       }
 
       var styleValue = unreadPropStyle[key];
-      if (typeof styleValue === &#x27;number&#x27;) {
+      if (typeof styleValue === 'number') {
         if (!dirty) {
           dirty = true;
           currentStyles[i] = _extends({}, currentStyles[i]);
@@ -5752,9 +5745,9 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
     }
   }
 
-  // unlike the other 2 components, we can&#x27;t detect staleness and optionally
-  // opt out of setState here. each style object&#x27;s data might contain new
-  // stuff we&#x27;re not/cannot compare
+  // unlike the other 2 components, we can't detect staleness and optionally
+  // opt out of setState here. each style object's data might contain new
+  // stuff we're not/cannot compare
   this.setState({
     currentStyles: currentStyles,
     currentVelocities: currentVelocities,
@@ -5783,31 +5776,31 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
   }
   // TODO: when config is {a: 10} and dest is {a: 10} do we raf once and
   // call cb? No, otherwise accidental parent rerender causes cb trigger
-  this.animationID = _raf2[&#x27;default&#x27;](function (timestamp) {
+  this.animationID = _raf2['default'](function (timestamp) {
     var propStyles = _this.props.styles;
-    var destStyles = typeof propStyles === &#x27;function&#x27; ? propStyles(rehydrateStyles(_this.state.mergedPropsStyles, _this.unreadPropStyles
+    var destStyles = typeof propStyles === 'function' ? propStyles(rehydrateStyles(_this.state.mergedPropsStyles, _this.unreadPropStyles
 , _this.state.lastIdealStyles)) : propStyles;
 
     // check if we need to animate in the first place
     if (shouldStopAnimationAll(_this.state.currentStyles, destStyles, _this.state.currentVelocities, _this.state.mergedPropsStyles
 )) {
-      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      // no need to cancel animationID here; shouldn't have any in flight
       _this.animationID = null;
       _this.accumulatedTime = 0;
       return;
     }
 
-    var currentTime = timestamp || _performanceNow2[&#x27;default&#x27;]();
+    var currentTime = timestamp || _performanceNow2['default']();
     var timeDelta = currentTime - _this.prevTime;
     _this.prevTime = currentTime;
     _this.accumulatedTime = _this.accumulatedTime + timeDelta;
     // more than 10 frames? prolly switched browser tab. Restart
-    if (_this.accumulatedTime &#x3e; msPerFrame * 10) {
+    if (_this.accumulatedTime &gt; msPerFrame * 10) {
       _this.accumulatedTime = 0;
     }
 
     if (_this.accumulatedTime === 0) {
-      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      // no need to cancel animationID here; shouldn't have any in flight
       _this.animationID = null;
       _this.startAnimationIfNecessary();
       return;
@@ -5827,7 +5820,7 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
     var newLastIdealStyles = _mergeAndSync3[3];
     var newLastIdealVelocities = _mergeAndSync3[4];
 
-    for (var i = 0; i &#x3c; newMergedPropsStyles.length; i++) {
+    for (var i = 0; i &lt; newMergedPropsStyles.length; i++) {
       var newMergedPropsStyle = newMergedPropsStyles[i].style;
       var newCurrentStyle = {};
       var newCurrentVelocity = {};
@@ -5840,7 +5833,7 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
         }
 
         var styleValue = newMergedPropsStyle[key];
-        if (typeof styleValue === &#x27;number&#x27;) {
+        if (typeof styleValue === 'number') {
           newCurrentStyle[key] = styleValue;
           newCurrentVelocity[key] = 0;
           newLastIdealStyle[key] = styleValue;
@@ -5848,15 +5841,15 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
         } else {
           var newLastIdealStyleValue = newLastIdealStyles[i][key];
           var newLastIdealVelocityValue = newLastIdealVelocities[i][key];
-          for (var j = 0; j &#x3c; framesToCatchUp; j++) {
-            var _stepper = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue
+          for (var j = 0; j &lt; framesToCatchUp; j++) {
+            var _stepper = _stepper4['default'](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue
 .val, styleValue.stiffness, styleValue.damping, styleValue.precision);
 
             newLastIdealStyleValue = _stepper[0];
             newLastIdealVelocityValue = _stepper[1];
           }
 
-          var _stepper2 = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.
+          var _stepper2 = _stepper4['default'](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.
 val, styleValue.stiffness, styleValue.damping, styleValue.precision);
 
           var nextIdealX = _stepper2[0];
@@ -5903,7 +5896,7 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
   var lastIdealStyles = _mergeAndSync2[3];
   var lastIdealVelocities = _mergeAndSync2[4];
 
-  for (var i = 0; i &#x3c; unreadPropStyles.length; i++) {
+  for (var i = 0; i &lt; unreadPropStyles.length; i++) {
     var unreadPropStyle = unreadPropStyles[i].style;
     var dirty = false;
 
@@ -5913,7 +5906,7 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
       }
 
       var styleValue = unreadPropStyle[key];
-      if (typeof styleValue === &#x27;number&#x27;) {
+      if (typeof styleValue === 'number') {
         if (!dirty) {
           dirty = true;
           currentStyles[i] = _extends({}, currentStyles[i]);
@@ -5935,9 +5928,9 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
     }
   }
 
-  // unlike the other 2 components, we can&#x27;t detect staleness and optionally
-  // opt out of setState here. each style object&#x27;s data might contain new
-  // stuff we&#x27;re not/cannot compare
+  // unlike the other 2 components, we can't detect staleness and optionally
+  // opt out of setState here. each style object's data might contain new
+  // stuff we're not/cannot compare
   this.setState({
     currentStyles: currentStyles,
     currentVelocities: currentVelocities,
@@ -5964,7 +5957,7 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function componentDidMount() {
-  this.prevTime = _performanceNow2[&#x27;default&#x27;]();
+  this.prevTime = _performanceNow2['default']();
   this.startAnimationIfNecessary();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -5988,12 +5981,12 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function componentWillReceiveProps(props) {
   if (this.unreadPropStyles) {
-    // previous props haven&#x27;t had the chance to be set yet; set them here
+    // previous props haven't had the chance to be set yet; set them here
     this.clearUnreadPropStyle(this.unreadPropStyles);
   }
 
   var styles = props.styles;
-  if (typeof styles === &#x27;function&#x27;) {
+  if (typeof styles === 'function') {
     this.unreadPropStyles = styles(rehydrateStyles(this.state.mergedPropsStyles, this.unreadPropStyles, this.state.lastIdealStyles
 ));
   } else {
@@ -6001,7 +5994,7 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
   }
 
   if (this.animationID == null) {
-    this.prevTime = _performanceNow2[&#x27;default&#x27;]();
+    this.prevTime = _performanceNow2['default']();
     this.startAnimationIfNecessary();
   }
 }</pre></li>
@@ -6027,7 +6020,7 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
     <li>description and source-code<pre class="apidocCodePre">function componentWillUnmount() {
   this.unmounting = true;
   if (this.animationID != null) {
-    _raf2[&#x27;default&#x27;].cancel(this.animationID);
+    _raf2['default'].cancel(this.animationID);
     this.animationID = null;
   }
 }</pre></li>
@@ -6058,11 +6051,11 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
   var willLeave = _props.willLeave;
   var didLeave = _props.didLeave;
 
-  var destStyles = typeof styles === &#x27;function&#x27; ? styles(defaultStyles) : styles;
+  var destStyles = typeof styles === 'function' ? styles(defaultStyles) : styles;
 
-  // this is special. for the first time around, we don&#x27;t have a comparison
-  // between last (no last) and current merged props. we&#x27;ll compute last so:
-  // say default is {a, b} and styles (dest style) is {b, c}, we&#x27;ll
+  // this is special. for the first time around, we don't have a comparison
+  // between last (no last) and current merged props. we'll compute last so:
+  // say default is {a, b} and styles (dest style) is {b, c}, we'll
   // fabricate last as {a, b}
   var oldMergedPropsStyles = undefined;
   if (defaultStyles == null) {
@@ -6070,7 +6063,7 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
   } else {
     oldMergedPropsStyles = defaultStyles.map(function (defaultStyleCell) {
       // TODO: key search code
-      for (var i = 0; i &#x3c; destStyles.length; i++) {
+      for (var i = 0; i &lt; destStyles.length; i++) {
         if (destStyles[i].key === defaultStyleCell.key) {
           return destStyles[i];
         }
@@ -6079,18 +6072,18 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
     });
   }
   var oldCurrentStyles = defaultStyles == null ? destStyles.map(function (s) {
-    return _stripStyle2[&#x27;default&#x27;](s.style);
+    return _stripStyle2['default'](s.style);
   }) : defaultStyles.map(function (s) {
-    return _stripStyle2[&#x27;default&#x27;](s.style);
+    return _stripStyle2['default'](s.style);
   });
   var oldCurrentVelocities = defaultStyles == null ? destStyles.map(function (s) {
-    return _mapToZero2[&#x27;default&#x27;](s.style);
+    return _mapToZero2['default'](s.style);
   }) : defaultStyles.map(function (s) {
-    return _mapToZero2[&#x27;default&#x27;](s.style);
+    return _mapToZero2['default'](s.style);
   });
 
   var _mergeAndSync = mergeAndSync(
-  // Because this is an old-style React.createClass component, Flow doesn&#x27;t
+  // Because this is an old-style React.createClass component, Flow doesn't
   // understand that the willEnter and willLeave props have default values
   // and will always be present.
   willEnter, willLeave, didLeave, oldMergedPropsStyles, destStyles, oldCurrentStyles, oldCurrentVelocities, oldCurrentStyles, //
@@ -6136,7 +6129,7 @@ oldLastIdealStyles really
     <li>description and source-code<pre class="apidocCodePre">function render() {
   var hydratedStyles = rehydrateStyles(this.state.mergedPropsStyles, this.unreadPropStyles, this.state.currentStyles);
   var renderedChildren = this.props.children(hydratedStyles);
-  return renderedChildren &#x26;&#x26; _react2[&#x27;default&#x27;].Children.only(renderedChildren);
+  return renderedChildren &amp;&amp; _react2['default'].Children.only(renderedChildren);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -6165,31 +6158,31 @@ oldLastIdealStyles really
   }
   // TODO: when config is {a: 10} and dest is {a: 10} do we raf once and
   // call cb? No, otherwise accidental parent rerender causes cb trigger
-  this.animationID = _raf2[&#x27;default&#x27;](function (timestamp) {
+  this.animationID = _raf2['default'](function (timestamp) {
     var propStyles = _this.props.styles;
-    var destStyles = typeof propStyles === &#x27;function&#x27; ? propStyles(rehydrateStyles(_this.state.mergedPropsStyles, _this.unreadPropStyles
+    var destStyles = typeof propStyles === 'function' ? propStyles(rehydrateStyles(_this.state.mergedPropsStyles, _this.unreadPropStyles
 , _this.state.lastIdealStyles)) : propStyles;
 
     // check if we need to animate in the first place
     if (shouldStopAnimationAll(_this.state.currentStyles, destStyles, _this.state.currentVelocities, _this.state.mergedPropsStyles
 )) {
-      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      // no need to cancel animationID here; shouldn't have any in flight
       _this.animationID = null;
       _this.accumulatedTime = 0;
       return;
     }
 
-    var currentTime = timestamp || _performanceNow2[&#x27;default&#x27;]();
+    var currentTime = timestamp || _performanceNow2['default']();
     var timeDelta = currentTime - _this.prevTime;
     _this.prevTime = currentTime;
     _this.accumulatedTime = _this.accumulatedTime + timeDelta;
     // more than 10 frames? prolly switched browser tab. Restart
-    if (_this.accumulatedTime &#x3e; msPerFrame * 10) {
+    if (_this.accumulatedTime &gt; msPerFrame * 10) {
       _this.accumulatedTime = 0;
     }
 
     if (_this.accumulatedTime === 0) {
-      // no need to cancel animationID here; shouldn&#x27;t have any in flight
+      // no need to cancel animationID here; shouldn't have any in flight
       _this.animationID = null;
       _this.startAnimationIfNecessary();
       return;
@@ -6209,7 +6202,7 @@ oldLastIdealStyles really
     var newLastIdealStyles = _mergeAndSync3[3];
     var newLastIdealVelocities = _mergeAndSync3[4];
 
-    for (var i = 0; i &#x3c; newMergedPropsStyles.length; i++) {
+    for (var i = 0; i &lt; newMergedPropsStyles.length; i++) {
       var newMergedPropsStyle = newMergedPropsStyles[i].style;
       var newCurrentStyle = {};
       var newCurrentVelocity = {};
@@ -6222,7 +6215,7 @@ oldLastIdealStyles really
         }
 
         var styleValue = newMergedPropsStyle[key];
-        if (typeof styleValue === &#x27;number&#x27;) {
+        if (typeof styleValue === 'number') {
           newCurrentStyle[key] = styleValue;
           newCurrentVelocity[key] = 0;
           newLastIdealStyle[key] = styleValue;
@@ -6230,15 +6223,15 @@ oldLastIdealStyles really
         } else {
           var newLastIdealStyleValue = newLastIdealStyles[i][key];
           var newLastIdealVelocityValue = newLastIdealVelocities[i][key];
-          for (var j = 0; j &#x3c; framesToCatchUp; j++) {
-            var _stepper = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue
+          for (var j = 0; j &lt; framesToCatchUp; j++) {
+            var _stepper = _stepper4['default'](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue
 .val, styleValue.stiffness, styleValue.damping, styleValue.precision);
 
             newLastIdealStyleValue = _stepper[0];
             newLastIdealVelocityValue = _stepper[1];
           }
 
-          var _stepper2 = _stepper4[&#x27;default&#x27;](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.
+          var _stepper2 = _stepper4['default'](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.
 val, styleValue.stiffness, styleValue.damping, styleValue.precision);
 
           var nextIdealX = _stepper2[0];
@@ -6297,28 +6290,28 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function mergeDiff(prev, next, onRemove) {
-  // bookkeeping for easier access of a key&#x27;s index below. This is 2 allocations +
+  // bookkeeping for easier access of a key's index below. This is 2 allocations +
   // potentially triggering chrome hash map mode for objs (so it might be faster
 
   var prevKeyIndex = {};
-  for (var i = 0; i &#x3c; prev.length; i++) {
+  for (var i = 0; i &lt; prev.length; i++) {
     prevKeyIndex[prev[i].key] = i;
   }
   var nextKeyIndex = {};
-  for (var i = 0; i &#x3c; next.length; i++) {
+  for (var i = 0; i &lt; next.length; i++) {
     nextKeyIndex[next[i].key] = i;
   }
 
   // first, an overly elaborate way of merging prev and next, eliminating
-  // duplicates (in terms of keys). If there&#x27;s dupe, keep the item in next).
+  // duplicates (in terms of keys). If there's dupe, keep the item in next).
   // This way of writing it saves allocations
   var ret = [];
-  for (var i = 0; i &#x3c; next.length; i++) {
+  for (var i = 0; i &lt; next.length; i++) {
     ret[i] = next[i];
   }
-  for (var i = 0; i &#x3c; prev.length; i++) {
+  for (var i = 0; i &lt; prev.length; i++) {
     if (!Object.prototype.hasOwnProperty.call(nextKeyIndex, prev[i].key)) {
-      // this is called my TM&#x27;s `mergeAndSync`, which calls willLeave. We don&#x27;t
+      // this is called my TM's `mergeAndSync`, which calls willLeave. We don't
       // merge in keys that the user desires to kill
       var fill = onRemove(i, prev[i]);
       if (fill != null) {
@@ -6334,28 +6327,28 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
     var prevOrderA = prevKeyIndex[a.key];
     var prevOrderB = prevKeyIndex[b.key];
 
-    if (nextOrderA != null &#x26;&#x26; nextOrderB != null) {
+    if (nextOrderA != null &amp;&amp; nextOrderB != null) {
       // both keys in next
       return nextKeyIndex[a.key] - nextKeyIndex[b.key];
-    } else if (prevOrderA != null &#x26;&#x26; prevOrderB != null) {
+    } else if (prevOrderA != null &amp;&amp; prevOrderB != null) {
       // both keys in prev
       return prevKeyIndex[a.key] - prevKeyIndex[b.key];
     } else if (nextOrderA != null) {
       // key a in next, key b in prev
 
-      // how to determine the order between a and b? We find a &#x22;pivot&#x22; (term
+      // how to determine the order between a and b? We find a "pivot" (term
       // abuse), a key present in both prev and next, that is sandwiched between
-      // a and b. In the context of our above example, if we&#x27;re comparing a and
-      // d, b&#x27;s (the only) pivot
-      for (var i = 0; i &#x3c; next.length; i++) {
+      // a and b. In the context of our above example, if we're comparing a and
+      // d, b's (the only) pivot
+      for (var i = 0; i &lt; next.length; i++) {
         var pivot = next[i].key;
         if (!Object.prototype.hasOwnProperty.call(prevKeyIndex, pivot)) {
           continue;
         }
 
-        if (nextOrderA &#x3c; nextKeyIndex[pivot] &#x26;&#x26; prevOrderB &#x3e; prevKeyIndex[pivot]) {
+        if (nextOrderA &lt; nextKeyIndex[pivot] &amp;&amp; prevOrderB &gt; prevKeyIndex[pivot]) {
           return -1;
-        } else if (nextOrderA &#x3e; nextKeyIndex[pivot] &#x26;&#x26; prevOrderB &#x3c; prevKeyIndex[pivot]) {
+        } else if (nextOrderA &gt; nextKeyIndex[pivot] &amp;&amp; prevOrderB &lt; prevKeyIndex[pivot]) {
           return 1;
         }
       }
@@ -6363,14 +6356,14 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
       return 1;
     }
     // prevOrderA, nextOrderB
-    for (var i = 0; i &#x3c; next.length; i++) {
+    for (var i = 0; i &lt; next.length; i++) {
       var pivot = next[i].key;
       if (!Object.prototype.hasOwnProperty.call(prevKeyIndex, pivot)) {
         continue;
       }
-      if (nextOrderB &#x3c; nextKeyIndex[pivot] &#x26;&#x26; prevOrderA &#x3e; prevKeyIndex[pivot]) {
+      if (nextOrderB &lt; nextKeyIndex[pivot] &amp;&amp; prevOrderA &gt; prevKeyIndex[pivot]) {
         return 1;
-      } else if (nextOrderB &#x3e; nextKeyIndex[pivot] &#x26;&#x26; prevOrderA &#x3c; prevKeyIndex[pivot]) {
+      } else if (nextOrderB &gt; nextKeyIndex[pivot] &amp;&amp; prevOrderA &lt; prevKeyIndex[pivot]) {
         return -1;
       }
     }
@@ -6396,10 +6389,10 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function reorderKeys() {
-  if (process.env.NODE_ENV === &#x27;development&#x27;) {
+  if (process.env.NODE_ENV === 'development') {
     if (!hasWarned) {
       hasWarned = true;
-      console.error(&#x27;`reorderKeys` has been removed, since it is no longer needed for TransitionMotion\&#x27;s new styles array API.&#x27;);
+      console.error('`reorderKeys` has been removed, since it is no longer needed for TransitionMotion\'s new styles array API.');
     }
   }
 }</pre></li>
@@ -6430,9 +6423,9 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
       return false;
     }
 
-    var styleValue = typeof style[key] === &#x27;number&#x27; ? style[key] : style[key].val;
+    var styleValue = typeof style[key] === 'number' ? style[key] : style[key].val;
     // stepper will have already taken care of rounding precision errors, so
-    // won&#x27;t have such thing as 0.9999 !=== 1
+    // won't have such thing as 0.9999 !=== 1
     if (currentStyle[key] !== styleValue) {
       return false;
     }
@@ -6495,7 +6488,7 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
   var newV = v + a * secondPerFrame;
   var newX = x + newV * secondPerFrame;
 
-  if (Math.abs(newV) &#x3c; precision &#x26;&#x26; Math.abs(newX - destX) &#x3c; precision) {
+  if (Math.abs(newV) &lt; precision &amp;&amp; Math.abs(newX - destX) &lt; precision) {
     reusedTuple[0] = destX;
     reusedTuple[1] = 0;
     return reusedTuple;
@@ -6528,7 +6521,7 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
     if (!Object.prototype.hasOwnProperty.call(style, key)) {
       continue;
     }
-    ret[key] = typeof style[key] === &#x27;number&#x27; ? style[key] : style[key].val;
+    ret[key] = typeof style[key] === 'number' ? style[key] : style[key].val;
   }
   return ret;
 }</pre></li>
@@ -6544,3 +6537,4 @@ val, styleValue.stiffness, styleValue.damping, styleValue.precision);
     ]
 </div>
 </div>
+</body></html>
