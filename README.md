@@ -1,4 +1,7 @@
-# api documentation for  [react-motion (v0.4.7)](https://github.com/chenglou/react-motion#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-react-motion.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-react-motion) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-react-motion.svg)](https://travis-ci.org/npmdoc/node-npmdoc-react-motion)
+# npmdoc-react-motion
+
+#### basic api documentation for  [react-motion (v0.4.8)](https://github.com/chenglou/react-motion#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-react-motion.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-react-motion) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-react-motion.svg)](https://travis-ci.org/npmdoc/node-npmdoc-react-motion)
+
 #### A spring that solves your animation problems.
 
 [![NPM](https://nodei.co/npm/react-motion.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/react-motion)
@@ -147,7 +150,9 @@
         }
     ],
     "dependencies": {
+        "create-react-class": "^15.5.2",
         "performance-now": "^0.2.0",
+        "prop-types": "^15.5.8",
         "raf": "^3.1.0"
     },
     "description": "A spring that solves your animation problems.",
@@ -189,10 +194,10 @@
     },
     "directories": {},
     "dist": {
-        "shasum": "f77331ec7920bdb0d0cfc37eb6ffa10571bf42c7",
-        "tarball": "https://registry.npmjs.org/react-motion/-/react-motion-0.4.7.tgz"
+        "shasum": "23bb2dd27c2d8e00d229e45572d105efcf40a35e",
+        "tarball": "https://registry.npmjs.org/react-motion/-/react-motion-0.4.8.tgz"
     },
-    "gitHead": "b2cb3c226e2834b33c97ad5e9aaf06e0066ac421",
+    "gitHead": "b4859146a19adba5d3fbc8bc7020aa1ca2073c22",
     "homepage": "https://github.com/chenglou/react-motion#readme",
     "keywords": [
         "react",
@@ -237,7 +242,8 @@
         "test:dev": "karma start ./karma.conf.js --no-single-run --auto-watch",
         "test:travis": "karma start ./karma.conf.js --single-run"
     },
-    "version": "0.4.7"
+    "version": "0.4.8",
+    "bin": {}
 }
 ```
 
